@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><style>html, body { margin: 0; } html { background: transparent; } body {width:100%;}</style><style>/* zikpe/src/style.css */
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  background: var(--ds-page);
+}
+.file-card:has(.magazine) {
+  max-width: 1280px !important;
+  padding: 0 !important;
+}
+.magazine {
+  color: var(--ds-ink);
+  font-family: "KMR Melange Grotesk", sans-serif;
+}
+.magazine * {
+  box-sizing: border-box;
+}
+.magazine a {
+  color: inherit;
+  text-decoration: none;
+}
+.magazine button,
+.magazine input {
+  font: inherit;
+}
+.magazine button {
+  cursor: pointer;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--ds-hairline);
+  gap: 28px;
+}
+.brand {
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: -1.7px;
+  white-space: nowrap;
+}
+.brand span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3.4px;
+  margin-top: 4px;
+}
+.topbar nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 600;
+}
+.topbar > a:last-child {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.masthead {
+  padding: 0 40px 44px;
+}
+.mast-label {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.mast-label span {
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ds-ink-2);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  background: #edf2fc;
+  min-height: 450px;
+}
+.heroimage {
+  position: relative;
+  min-height: 450px;
+}
+.heroimage img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.photo-mark {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-size: 9px;
+  background: #fffdf6dd;
+  padding: 4px 7px;
+  color: #3a3430;
+}
+.herocopy {
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.eyebrow {
+  display: block;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.herocopy h1,
+.herocopy h2 {
+  font-size: 48px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.8px !important;
+  margin: 18px 0 22px !important;
+  font-weight: 800 !important;
+}
+.herocopy p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+.herocopy header {
+  padding: 0 !important;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 23px;
+  background: var(--ds-ink);
+  color: white !important;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.hero-foot {
+  margin-top: 28px;
+  font-size: 10px;
+  color: var(--ds-ink-2);
+}
+.featured,
+.latest,
+.related {
+  padding: 28px 40px 54px;
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 27px;
+}
+.section-title h2,
+.newsletter h2,
+.money-strip h2 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin: 8px 0;
+}
+.section-title a {
+  font-size: 12px;
+  border-bottom: 1px solid;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+.story {
+  display: block;
+  min-width: 0;
+}
+.photo {
+  position: relative;
+  overflow: hidden;
+}
+.story img {
+  width: 100%;
+  height: 244px;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s;
+}
+.story:hover img {
+  transform: scale(1.035);
+}
+.story.large img {
+  height: 320px;
+}
+.story .eyebrow {
+  margin: 16px 0 7px;
+}
+.story .eyebrow span {
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--ds-ink-2);
+  margin-left: 4px;
+}
+.story h3 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 11px;
+  letter-spacing: -.35px;
+}
+.story.large h3 {
+  font-size: 25px;
+}
+.story p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ds-ink-2);
+  margin: 0 0 12px;
+}
+.read {
+  font-size: 10px;
+  letter-spacing: .4px;
+  border-bottom: 1px solid var(--ds-hairline);
+  padding-bottom: 4px;
+}
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid var(--ds-hairline);
+}
+.mini-grid > a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.mini-grid img {
+  width: 88px;
+  height: 104px;
+  object-fit: cover;
+}
+.mini-grid h3 {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.mini-grid .eyebrow {
+  font-size: 9px;
+}
+.latest {
+  background: #edf2fc;
+  padding-top: 43px;
+}
+.search {
+  display: block;
+  min-width: 210px;
+}
+.search span {
+  font-size: 10px;
+  display: block;
+  margin-bottom: 6px;
+}
+.search input {
+  background: white;
+  border: 1px solid var(--ds-hairline);
+  padding: 12px;
+  font-size: 12px;
+  width: 100%;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+.categories button,
+.pagination button,
+.empty button {
+  border: 1px solid var(--ds-hairline);
+  background: white;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 11px;
+  border-radius: 24px;
+  color: var(--ds-ink);
+}
+button.selected {
+  background: var(--ds-ink);
+  color: white;
+  border-color: var(--ds-ink);
+}
+.results {
+  font-size: 11px;
+  color: var(--ds-ink-2);
+  margin: 12px 0 26px;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 38px 22px;
+}
+.story-grid .story h3 {
+  font-size: 20px;
+}
+.story-grid .story img {
+  height: 255px;
+}
+.story-grid .eyebrow span {
+  display: none;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+.pagination button:disabled {
+  opacity: .4;
+  cursor: default;
+}
+.money-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  padding: 55px 70px;
+}
+.money-strip img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+.money-strip p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ds-ink-2);
+}
+.newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  padding: 45px 40px;
+  background: #edf2fc;
+  align-items: center;
+}
+.newsletter h2 {
+  font-size: 32px;
+}
+.newsletter p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 14px 0;
+}
+.newsletter label {
+  font-size: 11px;
+  display: block;
+  margin-bottom: 9px;
+}
+.emailrow {
+  display: flex;
+  background: white;
+}
+.emailrow input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid var(--ds-hairline);
+  font-size: 12px;
+}
+.emailrow button {
+  white-space: nowrap;
+  background: var(--ds-ink);
+  color: white;
+  border: 0;
+  padding: 13px 19px;
+  font-size: 12px;
+}
+.newsletter .micro {
+  font-size: 10px;
+  min-height: 18px;
+  color: var(--ds-ink-2);
+}
+footer {
+  padding: 35px 40px 20px;
+}
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--ds-hairline);
+}
+.footer-main p {
+  font-size: 12px;
+  color: var(--ds-ink-2);
+  line-height: 1.7;
+}
+.footer-main > a {
+  font-size: 11px;
+}
+.article {
+  padding: 32px 40px;
+}
+.back {
+  font-size: 11px;
+  display: inline-block;
+  min-height: 44px;
+}
+.article-head {
+  max-width: 800px;
+  margin: 12px auto 30px;
+  text-align: center;
+}
+.article-head h1 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.7px;
+  margin: 20px 0;
+}
+.lede {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ds-ink-2);
+}
+.byline {
+  font-size: 11px;
+  margin-top: 22px;
+}
+.byline span {
+  margin-left: 30px;
+  color: var(--ds-ink-2);
+}
+.article-photo {
+  margin: 0;
+}
+.article-photo img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+.article-photo figcaption {
+  font-size: 10px;
+  color: var(--ds-ink-2);
+  line-height: 1.5;
+  padding: 10px 0;
+}
+.article-body {
+  max-width: 680px;
+  margin: 35px auto;
+}
+.article-body section {
+  margin-bottom: 29px;
+}
+.article-body h2 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 28px;
+  letter-spacing: -.4px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+.article-body p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ds-ink-2);
+}
+.faq {
+  border-top: 1px solid var(--ds-hairline);
+  padding-top: 27px;
+}
+.faq details {
+  border-bottom: 1px solid var(--ds-hairline);
+  padding: 15px 0;
+}
+.faq summary {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 35px;
+}
+.faq p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.article-cta {
+  padding: 30px;
+  background: #edf2fc;
+  margin: 30px 0;
+}
+.article-cta a {
+  font-size: 13px;
+  border-bottom: 1px solid;
+}
+.sources {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--ds-ink-2);
+}
+.sources p {
+  font-size: 12px;
+}
+.sources summary {
+  cursor: pointer;
+  min-height: 44px;
+}
+.sources a {
+  text-decoration: underline;
+}
+.related {
+  background: #edf2fc;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.empty {
+  text-align: center;
+  padding: 50px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--ds-teal);
+  outline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .topbar {
+    padding: 20px 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .topbar nav {
+    order: 3;
+    width: 100%;
+    gap: 22px;
+  }
+  .topbar nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .masthead {
+    padding: 0 24px 30px;
+  }
+  .hero {
+    min-height: 390px;
+  }
+  .heroimage {
+    min-height: 390px;
+  }
+  .herocopy {
+    padding: 30px;
+  }
+  .herocopy h1,
+  .herocopy h2 {
+    font-size: 40px !important;
+  }
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured,
+  .latest,
+  .related {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .mini-grid {
+    grid-template-columns: 1fr;
+  }
+  .mini-grid img {
+    width: 100px;
+    height: 90px;
+  }
+  .money-strip {
+    padding: 35px 24px;
+    gap: 25px;
+  }
+  .newsletter {
+    padding: 35px 24px;
+  }
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .related-grid > .story:last-child {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .topbar {
+    padding: 18px 20px;
+  }
+  .brand {
+    font-size: 29px;
+  }
+  .topbar nav {
+    gap: 4px 21px;
+    font-size: 12px;
+  }
+  .topbar > a:last-child {
+    font-size: 11px;
+  }
+  .masthead {
+    padding: 0 20px 22px;
+  }
+  .mast-label {
+    padding: 16px 0;
+    font-size: 10px;
+  }
+  .mast-label span {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .heroimage {
+    min-height: 275px;
+  }
+  .herocopy {
+    padding: 30px 25px;
+  }
+  .herocopy h1,
+  .herocopy h2 {
+    font-size: 38px !important;
+    letter-spacing: -1.5px !important;
+  }
+  .herocopy p {
+    font-size: 14px !important;
+  }
+  .hero-foot {
+    margin-top: 24px;
+  }
+  .featured,
+  .latest,
+  .related {
+    padding: 25px 20px 35px;
+  }
+  .section-title {
+    display: block;
+    margin-bottom: 22px;
+  }
+  .section-title h2 {
+    font-size: 31px;
+    margin-bottom: 15px;
+  }
+  .section-title > a {
+    display: inline-block;
+  }
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .story.large img {
+    height: 270px;
+  }
+  .story.large h3 {
+    font-size: 24px;
+  }
+  .mini-grid {
+    gap: 22px;
+    margin-top: 30px;
+    padding-top: 24px;
+  }
+  .mini-grid .eyebrow {
+    font-size: 9px;
+  }
+  .story-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 15px;
+  }
+  .story-grid .story img {
+    height: 185px;
+  }
+  .story-grid .story h3 {
+    font-size: 17px;
+  }
+  .story-grid .eyebrow {
+    font-size: 8px;
+    letter-spacing: .7px;
+  }
+  .story-grid .photo-mark {
+    display: none;
+  }
+  .search {
+    margin-top: 24px;
+  }
+  .categories {
+    gap: 7px;
+  }
+  .categories button {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+  .pagination {
+    gap: 7px;
+  }
+  .pagination button {
+    padding: 10px 12px;
+  }
+  .money-strip {
+    grid-template-columns: 1fr;
+    padding: 35px 20px;
+    gap: 25px;
+  }
+  .money-strip h2 {
+    font-size: 31px;
+  }
+  .money-strip img {
+    height: 290px;
+  }
+  .newsletter {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+    gap: 22px;
+  }
+  .newsletter h2 {
+    font-size: 30px;
+  }
+  .emailrow button {
+    padding: 12px;
+  }
+  .footer-main {
+    display: block;
+  }
+  .footer-main p {
+    margin: 20px 0;
+  }
+  footer {
+    padding: 30px 20px 20px;
+  }
+  .article {
+    padding: 23px 20px;
+  }
+  .article-head {
+    margin-top: 12px;
+    text-align: left;
+  }
+  .article-head h1 {
+    font-size: 37px;
+    letter-spacing: -1.2px;
+  }
+  .lede {
+    font-size: 15px;
+  }
+  .article-photo img {
+    height: 270px;
+  }
+  .article-body {
+    margin-top: 25px;
+  }
+  .article-body h2 {
+    font-size: 27px;
+  }
+  .article-body p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .article-cta {
+    padding: 24px;
+  }
+  .related-grid {
+    gap: 16px;
+  }
+  .related-grid .story img {
+    height: 180px;
+  }
+  .related-grid .story h3 {
+    font-size: 18px;
+  }
+  .related-grid .photo-mark {
+    display: none;
+  }
+  .byline {
+    font-size: 10px;
+  }
+  .photo-mark {
+    font-size: 8px;
+  }
+}
+.collage {
+  position: relative;
+  padding: 55px 0 75px;
+  overflow: hidden;
+}
+.collage-photos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+  transform: rotate(-2deg);
+  width: 115%;
+  margin-left: -7.5%;
+}
+.collage-photos img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+}
+.collage-caption {
+  position: absolute;
+  left: 39%;
+  right: 8%;
+  top: 39%;
+  background: white;
+  padding: 24px 28px;
+  box-shadow: 0 6px 25px #00000012;
+}
+.tags {
+  display: flex;
+  gap: 8px;
+}
+.tags span {
+  background: #edf2fc;
+  padding: 5px 10px;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+.collage-caption h2 {
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 13px 0;
+}
+.collage-read {
+  font-size: 10px;
+}
+.collage-credit {
+  position: absolute;
+  bottom: 24px;
+  left: 40px;
+  font-size: 9px;
+  color: var(--ds-ink-2);
+}
+@media (max-width: 600px) {
+  .collage {
+    padding: 35px 0 80px;
+  }
+  .collage-photos {
+    gap: 12px;
+    width: 185%;
+    margin-left: -40%;
+  }
+  .collage-photos img {
+    height: 290px;
+  }
+  .collage-caption {
+    left: 15%;
+    right: 7%;
+    top: 40%;
+    padding: 17px;
+  }
+  .collage-caption h2 {
+    font-size: 18px;
+  }
+  .collage-credit {
+    left: 20px;
+    font-size: 8px;
+    bottom: 28px;
+  }
+}
+.category-page {
+  padding: 32px 40px 55px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 26px;
+  margin-top: 35px;
+}
+@media (max-width: 600px) {
+  .category-page {
+    padding: 24px 20px 40px;
+  }
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+.magazine {
+  color: #0d0d0d;
+  background: #fff;
+}
+.brand img {
+  width: 104px;
+  height: auto;
+  display: block;
+}
+.brand span {
+  color: #6633c9;
+  letter-spacing: 3.4px;
+}
+.hero,
+.newsletter,
+.related,
+.latest,
+.article-cta {
+  background: #f4effd;
+}
+.pill,
+.emailrow button {
+  background: #b2c532;
+  color: #0d0d0d !important;
+  font-weight: 600;
+}
+button.selected {
+  background: #6633c9;
+  border-color: #6633c9;
+  color: white;
+}
+.tags span {
+  background: #eee6fd;
+  color: #5424ab;
+}
+.topbar nav a:hover,
+.read,
+.section-title > a {
+  color: #6633c9;
+}
+.herocopy h1,
+.herocopy h2,
+.section-title h2,
+.newsletter h2,
+.money-strip h2,
+.article-head h1,
+.article-body h2,
+.category-page h1 {
+  font-family: "KMR Melange Grotesk", sans-serif !important;
+  letter-spacing: -1px;
+}
+.article-body h2 {
+  font-weight: 600;
+}
+.herocopy h1 {
+  font-weight: 600 !important;
+}
+.article-head h1 {
+  font-weight: 600;
+}
+.category-page h1 {
+  font-weight: 600 !important;
+}
+.newsletter h2,
+.section-title h2,
+.money-strip h2 {
+  font-weight: 600;
+}
+.brand {
+  letter-spacing: 0;
+}
+.topbar nav {
+  gap: 18px;
+}
+.newsletter .emailrow button:hover,
+.pill:hover {
+  background: #a0b426;
+}
+
+
+
+.magazine,
+.herocopy h1,
+.herocopy h2,
+.section-title h2,
+.newsletter h2,
+.money-strip h2,
+.article-head h1,
+.article-body h2,
+.category-page h1 {
+  font-family:
+    zikpe,
+    "KMR Melange Grotesk",
+    sans-serif !important;
+}
+
+html,body,#root{margin:0;min-height:100%}body{background:var(--ds-page)}.file-card:has(.magazine){max-width:1280px!important;padding:0!important}.magazine{color:var(--ds-ink);font-family:'KMR Melange Grotesk',sans-serif}.magazine *{box-sizing:border-box}.magazine a{color:inherit;text-decoration:none}.magazine button,.magazine input{font:inherit}.magazine button{cursor:pointer}.topbar{display:flex;align-items:center;justify-content:space-between;padding:24px 40px;border-bottom:1px solid var(--ds-hairline);gap:28px}.brand{font-size:31px;font-weight:700;letter-spacing:-1.7px;white-space:nowrap}.brand span{display:block;font-size:9px;letter-spacing:3.4px;margin-top:4px}.topbar nav{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;font-weight:600}.topbar>a:last-child{font-size:12px;white-space:nowrap}.masthead{padding:0 40px 44px}.mast-label{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;padding:20px 0;display:flex;justify-content:space-between}.mast-label span{font-size:11px;letter-spacing:0;text-transform:none;color:var(--ds-ink-2)}.hero{display:grid;grid-template-columns:1.08fr 1fr;background:#edf2fc;min-height:450px}.heroimage{position:relative;min-height:450px}.heroimage img{width:100%;height:100%;position:absolute;object-fit:cover}.photo-mark{position:absolute;bottom:12px;left:12px;font-size:9px;background:#fffdf6dd;padding:4px 7px;color:#3a3430}.herocopy{padding:44px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{display:block;letter-spacing:1.4px;text-transform:uppercase;font-size:10px;font-weight:600;line-height:1.8}.herocopy h1,.herocopy h2{font-size:48px!important;line-height:1.08!important;letter-spacing:-1.8px!important;margin:18px 0 22px!important;font-weight:800!important}.herocopy p{font-size:16px!important;line-height:1.7!important}.herocopy header{padding:0!important}.pill{display:inline-flex;align-items:center;min-height:46px;padding:12px 23px;background:var(--ds-ink);color:white!important;font-size:12px;font-weight:600;border-radius:30px;margin-top:20px}.hero-foot{margin-top:28px;font-size:10px;color:var(--ds-ink-2)}.featured,.latest,.related{padding:28px 40px 54px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:27px}.section-title h2,.newsletter h2,.money-strip h2{font-family:Aime,Georgia,serif;font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.15;margin:8px 0}.section-title a{font-size:12px;border-bottom:1px solid;padding:6px 0;white-space:nowrap}.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.story{display:block;min-width:0}.photo{position:relative;overflow:hidden}.story img{width:100%;height:244px;object-fit:cover;display:block;transition:transform .4s}.story:hover img{transform:scale(1.035)}.story.large img{height:320px}.story .eyebrow{margin:16px 0 7px}.story .eyebrow span{letter-spacing:0;text-transform:none;font-weight:400;color:var(--ds-ink-2);margin-left:4px}.story h3{font-size:21px;font-weight:600;line-height:1.25;margin:0 0 11px;letter-spacing:-.35px}.story.large h3{font-size:25px}.story p{font-size:13px;line-height:1.65;color:var(--ds-ink-2);margin:0 0 12px}.read{font-size:10px;letter-spacing:.4px;border-bottom:1px solid var(--ds-hairline);padding-bottom:4px}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:38px;padding-top:30px;border-top:1px solid var(--ds-hairline)}.mini-grid>a{display:flex;gap:14px;align-items:center}.mini-grid img{width:88px;height:104px;object-fit:cover}.mini-grid h3{font-size:15px;line-height:1.4;font-weight:600;margin:5px 0}.mini-grid .eyebrow{font-size:9px}.latest{background:#edf2fc;padding-top:43px}.search{display:block;min-width:210px}.search span{font-size:10px;display:block;margin-bottom:6px}.search input{background:white;border:1px solid var(--ds-hairline);padding:12px;font-size:12px;width:100%}.categories{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.categories button,.pagination button,.empty button{border:1px solid var(--ds-hairline);background:white;min-height:44px;padding:10px 14px;font-size:11px;border-radius:24px;color:var(--ds-ink)}button.selected{background:var(--ds-ink);color:white;border-color:var(--ds-ink)}.results{font-size:11px;color:var(--ds-ink-2);margin:12px 0 26px}.story-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:38px 22px}.story-grid .story h3{font-size:20px}.story-grid .story img{height:255px}.story-grid .eyebrow span{display:none}.pagination{display:flex;justify-content:center;gap:10px;margin-top:40px}.pagination button:disabled{opacity:.4;cursor:default}.money-strip{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px;padding:55px 70px}.money-strip img{width:100%;height:320px;object-fit:cover}.money-strip p{font-size:14px;line-height:1.7;color:var(--ds-ink-2)}.newsletter{display:grid;grid-template-columns:1fr 1fr;gap:42px;padding:45px 40px;background:#edf2fc;align-items:center}.newsletter h2{font-size:32px}.newsletter p{font-size:13px;line-height:1.6;margin:14px 0}.newsletter label{font-size:11px;display:block;margin-bottom:9px}.emailrow{display:flex;background:white}.emailrow input{width:100%;min-width:0;padding:15px;border:1px solid var(--ds-hairline);font-size:12px}.emailrow button{white-space:nowrap;background:var(--ds-ink);color:white;border:0;padding:13px 19px;font-size:12px}.newsletter .micro{font-size:10px;min-height:18px;color:var(--ds-ink-2)}footer{padding:35px 40px 20px}.footer-main{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:25px;border-bottom:1px solid var(--ds-hairline)}.footer-main p{font-size:12px;color:var(--ds-ink-2);line-height:1.7}.footer-main>a{font-size:11px}.article{padding:32px 40px}.back{font-size:11px;display:inline-block;min-height:44px}.article-head{max-width:800px;margin:12px auto 30px;text-align:center}.article-head h1{font-family:Aime,Georgia,serif;font-size:48px;font-weight:800;line-height:1.08;letter-spacing:-1.7px;margin:20px 0}.lede{font-size:17px;line-height:1.65;color:var(--ds-ink-2)}.byline{font-size:11px;margin-top:22px}.byline span{margin-left:30px;color:var(--ds-ink-2)}.article-photo{margin:0}.article-photo img{width:100%;height:440px;object-fit:cover;display:block}.article-photo figcaption{font-size:10px;color:var(--ds-ink-2);line-height:1.5;padding:10px 0}.article-body{max-width:680px;margin:35px auto}.article-body section{margin-bottom:29px}.article-body h2{font-family:Aime,Georgia,serif;font-size:28px;letter-spacing:-.4px;font-weight:400;line-height:1.25;margin:0 0 14px}.article-body p{font-size:15px;line-height:1.85;color:var(--ds-ink-2)}.faq{border-top:1px solid var(--ds-hairline);padding-top:27px}.faq details{border-bottom:1px solid var(--ds-hairline);padding:15px 0}.faq summary{font-size:14px;font-weight:600;cursor:pointer;min-height:35px}.faq p{font-size:14px;margin:5px 0}.article-cta{padding:30px;background:#edf2fc;margin:30px 0}.article-cta a{font-size:13px;border-bottom:1px solid}.sources{font-size:11px;line-height:1.8;color:var(--ds-ink-2)}.sources p{font-size:12px}.sources summary{cursor:pointer;min-height:44px}.sources a{text-decoration:underline}.related{background:#edf2fc}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.empty{text-align:center;padding:50px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--ds-teal);outline-offset:4px}
+@media(max-width:900px){.topbar{padding:20px 24px;gap:20px;flex-wrap:wrap}.topbar nav{order:3;width:100%;gap:22px}.topbar nav a{min-height:44px;display:flex;align-items:center}.masthead{padding:0 24px 30px}.hero{min-height:390px}.heroimage{min-height:390px}.herocopy{padding:30px}.herocopy h1,.herocopy h2{font-size:40px!important}.story-grid{grid-template-columns:repeat(2,1fr)}.featured,.latest,.related{padding-left:24px;padding-right:24px}.mini-grid{grid-template-columns:1fr}.mini-grid img{width:100px;height:90px}.money-strip{padding:35px 24px;gap:25px}.newsletter{padding:35px 24px}.related-grid{grid-template-columns:repeat(2,1fr)}.related-grid>.story:last-child{display:none}}
+@media(max-width:600px){.topbar{padding:18px 20px}.brand{font-size:29px}.topbar nav{gap:4px 21px;font-size:12px}.topbar>a:last-child{font-size:11px}.masthead{padding:0 20px 22px}.mast-label{padding:16px 0;font-size:10px}.mast-label span{display:none}.hero{grid-template-columns:1fr}.heroimage{min-height:275px}.herocopy{padding:30px 25px}.herocopy h1,.herocopy h2{font-size:38px!important;letter-spacing:-1.5px!important}.herocopy p{font-size:14px!important}.hero-foot{margin-top:24px}.featured,.latest,.related{padding:25px 20px 35px}.section-title{display:block;margin-bottom:22px}.section-title h2{font-size:31px;margin-bottom:15px}.section-title>a{display:inline-block}.featured-grid{grid-template-columns:1fr;gap:30px}.story.large img{height:270px}.story.large h3{font-size:24px}.mini-grid{gap:22px;margin-top:30px;padding-top:24px}.mini-grid .eyebrow{font-size:9px}.story-grid{grid-template-columns:1fr 1fr;gap:28px 15px}.story-grid .story img{height:185px}.story-grid .story h3{font-size:17px}.story-grid .eyebrow{font-size:8px;letter-spacing:.7px}.story-grid .photo-mark{display:none}.search{margin-top:24px}.categories{gap:7px}.categories button{padding:9px 12px;font-size:10px}.pagination{gap:7px}.pagination button{padding:10px 12px}.money-strip{grid-template-columns:1fr;padding:35px 20px;gap:25px}.money-strip h2{font-size:31px}.money-strip img{height:290px}.newsletter{grid-template-columns:1fr;padding:32px 20px;gap:22px}.newsletter h2{font-size:30px}.emailrow button{padding:12px}.footer-main{display:block}.footer-main p{margin:20px 0}footer{padding:30px 20px 20px}.article{padding:23px 20px}.article-head{margin-top:12px;text-align:left}.article-head h1{font-size:37px;letter-spacing:-1.2px}.lede{font-size:15px}.article-photo img{height:270px}.article-body{margin-top:25px}.article-body h2{font-size:27px}.article-body p{font-size:14px;line-height:1.85}.article-cta{padding:24px}.related-grid{gap:16px}.related-grid .story img{height:180px}.related-grid .story h3{font-size:18px}.related-grid .photo-mark{display:none}.byline{font-size:10px}.photo-mark{font-size:8px}}
+.collage{position:relative;padding:55px 0 75px;overflow:hidden}.collage-photos{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;transform:rotate(-2deg);width:115%;margin-left:-7.5%}.collage-photos img{width:100%;height:370px;object-fit:cover}.collage-caption{position:absolute;left:39%;right:8%;top:39%;background:white;padding:24px 28px;box-shadow:0 6px 25px #00000012}.tags{display:flex;gap:8px}.tags span{background:#edf2fc;padding:5px 10px;font-size:9px;letter-spacing:1.2px;font-weight:600}.collage-caption h2{font-size:21px;line-height:1.4;font-weight:600;margin:13px 0}.collage-read{font-size:10px}.collage-credit{position:absolute;bottom:24px;left:40px;font-size:9px;color:var(--ds-ink-2)}@media(max-width:600px){.collage{padding:35px 0 80px}.collage-photos{gap:12px;width:185%;margin-left:-40%}.collage-photos img{height:290px}.collage-caption{left:15%;right:7%;top:40%;padding:17px}.collage-caption h2{font-size:18px}.collage-credit{left:20px;font-size:8px;bottom:28px}}
+.category-page{padding:32px 40px 55px}.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 26px;margin-top:35px}@media(max-width:600px){.category-page{padding:24px 20px 40px}.category-grid{grid-template-columns:1fr;gap:32px}}
+/* ZikPe brand skin, inspected on its public homepage. */
+.magazine{color:#0d0d0d;background:#fff}.brand img{width:104px;height:auto;display:block}.brand span{color:#6633c9;letter-spacing:3.4px}.hero,.newsletter,.related,.latest,.article-cta{background:#f4effd}.pill,.emailrow button{background:#b2c532;color:#0d0d0d!important;font-weight:600}button.selected{background:#6633c9;border-color:#6633c9;color:white}.tags span{background:#eee6fd;color:#5424ab}.topbar nav a:hover,.read,.section-title>a{color:#6633c9}.herocopy h1,.herocopy h2,.section-title h2,.newsletter h2,.money-strip h2,.article-head h1,.article-body h2,.category-page h1{font-family:'KMR Melange Grotesk',sans-serif!important;letter-spacing:-1px}.article-body h2{font-weight:600}.herocopy h1{font-weight:600!important}.article-head h1{font-weight:600}.category-page h1{font-weight:600!important}.newsletter h2,.section-title h2,.money-strip h2{font-weight:600}.brand{letter-spacing:0}.topbar nav{gap:18px}.newsletter .emailrow button:hover,.pill:hover{background:#a0b426}
+
+
+.magazine,.herocopy h1,.herocopy h2,.section-title h2,.newsletter h2,.money-strip h2,.article-head h1,.article-body h2,.category-page h1{font-family:zikpe,Arial,sans-serif!important}
+</style><style>:root{--ds-page:#fff;--ds-ink:#131313;--ds-ink-2:#555;--ds-hairline:#e8e8e8;--ds-accent:#6633c9}.file-card{margin:auto;max-width:1280px}.file-header h1{font-size:40px;line-height:1.1;margin:20px 0}.file-header p{line-height:1.6}.file-closing{padding:25px 40px;font-size:12px;color:#555}body{width:100%!important}</style><style>.herocopy .file-header{padding:0}.herocopy h1{font-size:44px;line-height:1.07;margin:20px 0 40px}.herocopy p{font-size:16px;line-height:1.6}.category-page h1{font-size:36px}.file-closing{border-top:1px solid #eee}.file-closing p{margin:0}@media(max-width:640px){.herocopy h1{font-size:38px}.file-closing{padding:25px 20px}}</style><link href="/zikpe-theme.css" rel="stylesheet"/><title>Shop in India: travel stories | ZikPe Journal</title><meta content="Explore ZikPe shop stories for your India trip. Original guides to places, local experiences and practical travel details for visitors." name="description"/><meta content="index, follow, max-image-preview:large" name="robots"/><link href="https://zikpe-journal.ashwatthama710.workers.dev/category/shop/" rel="canonical"/><meta content="Shop in India: travel stories | ZikPe Journal" property="og:title"/><meta content="Explore ZikPe shop stories for your India trip. Original guides to places, local experiences and practical travel details for visitors." property="og:description"/><meta content="website" property="og:type"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/category/shop/" property="og:url"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/assets/fresh-craft.jpg" property="og:image"/><meta content="ZikPe Journal" property="og:site_name"/><meta content="en_IN" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Shop in India: travel stories | ZikPe Journal" name="twitter:title"/><meta content="Explore ZikPe shop stories for your India trip. Original guides to places, local experiences and practical travel details for visitors." name="twitter:description"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/assets/fresh-craft.jpg" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Shop in India: travel stories | ZikPe Journal", "description": "Explore ZikPe shop stories for your India trip. Original guides to places, local experiences and practical travel details for visitors.", "url": "https://zikpe-journal.ashwatthama710.workers.dev/category/shop/", "inLanguage": "en"}</script></head><body><main class="file-card" data-width="fluid"><div class="magazine"><header class="topbar"><a aria-label="ZikPe journal home" class="brand" href="/"><img alt="ZikPe" decoding="async" src="/assets/666854f1bf42a8c3.png"/><span>JOURNAL</span></a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/category/eat">Eat</a><a href="/category/see">See</a><a href="/category/stay">Stay</a><a href="/category/shop">Shop</a><a href="/category/guides">Guides</a><a href="/category/upi">UPI for Tourists</a><a href="/category/culture">Culture</a></nav><a class="file-link" href="https://zikpe.com" rel="noopener noreferrer" target="_blank">Discover ZikPe ↗</a></header><section class="category-page"><a class="back" href="/">← All stories</a><header class="file-header"><h1 class="file-title">Shop</h1><p class="file-intro">Original travel stories and practical guides for your time in India.</p></header><div class="category-grid"><a class="story" href="/stories/jaipur-lac-bangles-and-juttis-colour-fit-and-use/"><div class="photo"><img alt="Conceptual editorial illustration for Jaipur lac and juttis: colour, fit and a purchase you can wear" decoding="async" loading="lazy" src="/assets/jaipur-lac-twentyfour.webp"/></div><div class="eyebrow">Shop <span>• 4 min read</span></div><h3>Jaipur lac and juttis: colour, fit and a purchase you can wear</h3><p>A closer look at bangles and embroidered footwear, with the material and fit settled before the purchase.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/chennai-craft-gifts-poompuhar-material-and-packing/"><div class="photo"><img alt="Conceptual editorial illustration for Chennai craft gifts: a small object with its material understood" decoding="async" loading="lazy" src="/assets/chennai-crafts-twentyfour.webp"/></div><div class="eyebrow">Shop <span>• 4 min read</span></div><h3>Chennai craft gifts: a small object with its material understood</h3><p>Consider Tamil Nadu craft work beyond the saree browse, starting with the object and its purpose.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/hyderabad-ittar-a-slow-scent-test-and-a-clear-label/"><div class="photo"><img alt="Conceptual editorial illustration for Hyderabad ittar: choose the scent slowly and label the bottle clearly" decoding="async" loading="lazy" src="/assets/hyderabad-ittar-twentyfour.webp"/></div><div class="eyebrow">Shop <span>• 4 min read</span></div><h3>Hyderabad ittar: choose the scent slowly and label the bottle clearly</h3><p>A fragrance browse in the Old City, with concentration, ingredients and travel packing kept in view.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/mumbai-paithani-purchase-weave-origin-and-use/"><div class="photo"><img alt="Conceptual editorial illustration for A Paithani purchase in Mumbai: understand the weave before the price" decoding="async" loading="lazy" src="/assets/maharashtra-textile-twentyfour.webp"/></div><div class="eyebrow">Shop <span>• 4 min read</span></div><h3>A Paithani purchase in Mumbai: understand the weave before the price</h3><p>A Maharashtra textile can be a meaningful purchase, with origin and construction checked rather than assumed.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/delhi-dlf-emporio-a-focused-label-and-fitting-visit/"><div class="photo"><img alt="Conceptual editorial illustration for Delhi at DLF Emporio: choose the label, then the fitting" decoding="async" loading="lazy" src="/assets/delhi-labels-twentyfour.webp"/></div><div class="eyebrow">Shop <span>• 4 min read</span></div><h3>Delhi at DLF Emporio: choose the label, then the fitting</h3><p>A Vasant Kunj shopping visit works better with a specific purpose than a plan to browse every store.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/bengaluru-ub-city-a-design-led-browse-with-a-clear-aim/"><div class="photo"><img alt="Conceptual editorial illustration for Bengaluru at UB City: a design-led browse with a clear aim" decoding="async" loading="lazy" src="/assets/bengaluru-labels-twentyfour.webp"/></div><div class="eyebrow">Shop <span>• 4 min read</span></div><h3>Bengaluru at UB City: a design-led browse with a clear aim</h3><p>Choose a current store and an item to investigate, leaving room to walk away if it does not fit.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/goa-souvenirs-cashews-and-spices-you-will-use/"><div class="photo"><img alt="Conceptual editorial illustration for Goa souvenirs: cashews and spices you will actually use" decoding="async" loading="lazy" src="/assets/goa-cashews-twentythree.webp"/></div><div class="eyebrow">Shop <span>• 4 min read</span></div><h3>Goa souvenirs: cashews and spices you will actually use</h3><p>Choose a small food purchase with the variety, label and travel conditions clear.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/goa-markets-mapusa-or-an-anjuna-flea-market-browse/"><div class="photo"><img alt="Conceptual editorial illustration for Goa markets: Mapusa for a working market, Anjuna for a flea-market browse" decoding="async" loading="lazy" src="/assets/goa-markets-nineteen.webp"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Goa markets: Mapusa for a working market, Anjuna for a flea-market browse</h3><p>Choose the market for the kind of outing you want, then check its day and seasonal operation before travelling.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/kerala-sarees-in-kochi-kasavu-weave-and-a-clear-bill/"><div class="photo"><img alt="Conceptual editorial illustration for Kerala sarees in Kochi: look past the cream-and-gold display" decoding="async" loading="lazy" src="/assets/kochi-sarees-nineteen.webp"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Kerala sarees in Kochi: look past the cream-and-gold display</h3><p>Use Kerala’s weaving traditions to ask better questions about the cloth, rather than choosing only by its familiar colours.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/jaipur-markets-browse-with-time-and-buy-with-clarity/"><div class="photo"><img alt="Conceptual editorial illustration for Jaipur crafts: prints, blue pottery and a piece you will use" decoding="async" loading="lazy" src="/assets/jaipur-crafts-nineteen.webp"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Jaipur crafts: prints, blue pottery and a piece you will use</h3><p>Choose between textiles, pottery, bangles and footwear, then look closely at material, finish and the journey home.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/delhi-souvenirs-textiles-small-crafts-and-careful-packing/"><div class="photo"><img alt="Conceptual editorial illustration for Delhi souvenirs: choose a small craft, not a bag of obligations" decoding="async" loading="lazy" src="/assets/delhi-souvenirs-nineteen.webp"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Delhi souvenirs: choose a small craft, not a bag of obligations</h3><p>A focused gift search through a craft market or an emporium, with questions about maker, material and what will travel well.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/buying-art-in-mumbai-galleries-prints-and-a-clear-provenance/"><div class="photo"><img alt="Conceptual editorial illustration for Buying art in Mumbai: look first, then ask about the work" decoding="async" loading="lazy" src="/assets/mumbai-art-nineteen.webp"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Buying art in Mumbai: look first, then ask about the work</h3><p>A gallery visit can become a purchase, but viewing, authorship, edition details and delivery are separate questions.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/kolkata-craft-gifts-terracotta-dokra-and-kantha/"><div class="photo"><img alt="Conceptual editorial illustration for Bengal craft gifts in Kolkata: terracotta, metalwork or a stitched textile" decoding="async" loading="lazy" src="/assets/kolkata-crafts-nineteen.webp"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Bengal craft gifts in Kolkata: terracotta, metalwork or a stitched textile</h3><p>Look beyond the shelf arrangement to the material, maker and packing that make a craft gift a thoughtful purchase.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/chennai-saree-shopping-t-nagar-mylapore-and-silk-questions/"><div class="photo"><img alt="Conceptual editorial illustration for Chennai saree shopping: choose the cloth before the shop count" decoding="async" loading="lazy" src="/assets/chennai-textiles-sixteen.webp"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Chennai saree shopping: choose the cloth before the shop count</h3><p>A focused textile outing in T. Nagar or Mylapore, with better questions about silk, borders, care and the final bill.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/kolkata-bengali-handlooms-baluchari-jamdani-and-care/"><div class="photo"><img alt="Conceptual editorial illustration for Bengali handlooms in Kolkata: buy a weave you can explain" decoding="async" loading="lazy" src="/assets/bengal-handlooms-sixteen.webp"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Bengali handlooms in Kolkata: buy a weave you can explain</h3><p>Use Baluchari, Jamdani and everyday cottons as starting points, then ask about fibre, weaving and care before buying.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/shopping-in-mattancherry-spices-small-gifts-and-careful-questions/"><div class="photo"><img alt="Conceptual editorial illustration for Shopping in Mattancherry: spices, small gifts and careful questions" decoding="async" loading="lazy" src="/assets/kochi-spices-eleven.jpg"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Shopping in Mattancherry: spices, small gifts and careful questions</h3><p>Look beyond the first souvenir display. A slower shopping walk in Kochi starts with the working spice streets and a clear idea of what you want to take home.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/kolkata-shopping-books-textiles-and-a-purposeful-market-browse/"><div class="photo"><img alt="Conceptual editorial illustration for Kolkata shopping: books, textiles and a market browse with a purpose" decoding="async" loading="lazy" src="/assets/shopping-kolkata.jpg"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Kolkata shopping: books, textiles and a market browse with a purpose</h3><p>Choose College Street for books, Gariahat for clothing or New Market for a wider browse. They make three different outings, not one compulsory shopping circuit.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/bengaluru-shopping-commercial-street-or-chickpet-textiles/"><div class="photo"><img alt="Conceptual editorial illustration for Bengaluru shopping: Commercial Street or a focused textile visit to Chickpet" decoding="async" loading="lazy" src="/assets/shopping-bengaluru.jpg"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Bengaluru shopping: Commercial Street or a focused textile visit to Chickpet</h3><p>Decide between a mixed fashion browse and a textile-led outing, then give the fabric, fit and final price more attention than the bargain story.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/pune-shopping-laxmi-road-tulshibaug-and-a-clear-aim/"><div class="photo"><img alt="Conceptual editorial illustration for Pune shopping: Laxmi Road, Tulshibaug and a browse with a clear aim" decoding="async" loading="lazy" src="/assets/shopping-pune.jpg"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Pune shopping: Laxmi Road, Tulshibaug and a browse with a clear aim</h3><p>Give old-city clothing and accessories their own outing, or choose a lighter browse around Fergusson College Road. The right route starts with what you want.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/delhi-markets-craft-browse-or-old-city-shopping-walk/"><div class="photo"><img alt="Original editorial illustration for Delhi markets: choose a craft browse or an old-city shopping walk" decoding="async" loading="lazy" src="/assets/shop-delhi.jpg"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Delhi markets: choose a craft browse or an old-city shopping walk</h3><p>Dilli Haat and Chandni Chowk offer different kinds of browsing. Choose the place for what you want to buy, then give it time.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/mumbai-markets-colaba-and-fabric-lanes/"><div class="photo"><img alt="Original editorial illustration for Mumbai markets: a useful browse from Colaba to the fabric lanes" decoding="async" loading="lazy" src="/assets/shop-mumbai.jpg"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Mumbai markets: a useful browse from Colaba to the fabric lanes</h3><p>Browse for a small keepsake in Colaba or choose a focused fabric visit around Mangaldas Market. Keep the purchase as clear as the plan.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/hyderabad-shopping-a-close-look-at-laad-bazaar-bangles/"><div class="photo"><img alt="Original editorial illustration for Hyderabad shopping: a close look at Laad Bazaar's bangles" decoding="async" loading="lazy" src="/assets/shop-hyderabad.jpg"/></div><div class="eyebrow">Shopping <span>• 4 min read</span></div><h3>Hyderabad shopping: a close look at Laad Bazaar's bangles</h3><p>Give the old-city market a patient browse, choose bangles for their fit and finish, and keep jewellery claims clear before buying.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/a-jaipur-mall-afternoon-comfort-without-a-rushed-purchase"><div class="photo"><img alt="Original editorial illustration of hands embroidering a colorful textile" decoding="async" loading="lazy" src="/assets/fresh-craft.jpg"/></div><div class="eyebrow">Shopping <span>• 2 min read</span></div><h3>A Jaipur mall afternoon: comfort without a rushed purchase</h3><p>Use an indoor stop as a useful break, not an obligation to shop.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/buying-chikankari-in-lucknow-look-closely-before-you-choose"><div class="photo"><img alt="Original editorial illustration of hands embroidering a colorful textile" decoding="async" loading="lazy" src="/assets/fresh-craft.jpg"/></div><div class="eyebrow">Shopping <span>• 2 min read</span></div><h3>Buying chikankari in Lucknow: look closely before you choose</h3><p>A fabric purchase is easier when you know which details to ask about.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/pondicherry-shopping-discover-small-shops-with-an-open-mind"><div class="photo"><img alt="Original editorial illustration of hands embroidering a colorful textile" decoding="async" loading="lazy" src="/assets/fresh-craft.jpg"/></div><div class="eyebrow">Shopping <span>• 2 min read</span></div><h3>Pondicherry shopping: discover small shops with an open mind</h3><p>Browse the lanes, compare the details and buy only what you want to carry home.</p><span class="read">Read story ↗</span></a></div></section><section class="newsletter"><div><span class="eyebrow">The ZikPe newsletter</span><h2>Get new travel stories in your inbox.</h2><p>Travel ideas. Thoughtful guides. Fewer payment surprises.</p></div><form><label for="email">Email address</label><div class="emailrow"><input id="email" placeholder="you@example.com" required="" type="email"/><button type="button">Subscribe ↗</button></div><p class="micro" role="status">Newsletter design preview. Signup is not connected.</p></form></section><footer><div class="footer-main"><div class="brand"><img alt="ZikPe" decoding="async" src="/assets/666854f1bf42a8c3.png"/><span>JOURNAL</span></div><p>Travel India. Take your time.<br/>Stories for the places, people and payments along the way.</p><a href="/">Back to the journal ↑</a></div><footer class="file-closing">ZikPe Journal. No booking or payments happen on this site.</footer></footer></div></main><script src="/site.js"></script></body></html>

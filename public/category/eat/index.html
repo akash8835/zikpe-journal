@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><style>html, body { margin: 0; } html { background: transparent; } body {width:100%;}</style><style>/* zikpe/src/style.css */
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  background: var(--ds-page);
+}
+.file-card:has(.magazine) {
+  max-width: 1280px !important;
+  padding: 0 !important;
+}
+.magazine {
+  color: var(--ds-ink);
+  font-family: "KMR Melange Grotesk", sans-serif;
+}
+.magazine * {
+  box-sizing: border-box;
+}
+.magazine a {
+  color: inherit;
+  text-decoration: none;
+}
+.magazine button,
+.magazine input {
+  font: inherit;
+}
+.magazine button {
+  cursor: pointer;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--ds-hairline);
+  gap: 28px;
+}
+.brand {
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: -1.7px;
+  white-space: nowrap;
+}
+.brand span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3.4px;
+  margin-top: 4px;
+}
+.topbar nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 600;
+}
+.topbar > a:last-child {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.masthead {
+  padding: 0 40px 44px;
+}
+.mast-label {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.mast-label span {
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ds-ink-2);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  background: #edf2fc;
+  min-height: 450px;
+}
+.heroimage {
+  position: relative;
+  min-height: 450px;
+}
+.heroimage img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.photo-mark {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-size: 9px;
+  background: #fffdf6dd;
+  padding: 4px 7px;
+  color: #3a3430;
+}
+.herocopy {
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.eyebrow {
+  display: block;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.herocopy h1,
+.herocopy h2 {
+  font-size: 48px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.8px !important;
+  margin: 18px 0 22px !important;
+  font-weight: 800 !important;
+}
+.herocopy p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+.herocopy header {
+  padding: 0 !important;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 23px;
+  background: var(--ds-ink);
+  color: white !important;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.hero-foot {
+  margin-top: 28px;
+  font-size: 10px;
+  color: var(--ds-ink-2);
+}
+.featured,
+.latest,
+.related {
+  padding: 28px 40px 54px;
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 27px;
+}
+.section-title h2,
+.newsletter h2,
+.money-strip h2 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin: 8px 0;
+}
+.section-title a {
+  font-size: 12px;
+  border-bottom: 1px solid;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+.story {
+  display: block;
+  min-width: 0;
+}
+.photo {
+  position: relative;
+  overflow: hidden;
+}
+.story img {
+  width: 100%;
+  height: 244px;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s;
+}
+.story:hover img {
+  transform: scale(1.035);
+}
+.story.large img {
+  height: 320px;
+}
+.story .eyebrow {
+  margin: 16px 0 7px;
+}
+.story .eyebrow span {
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--ds-ink-2);
+  margin-left: 4px;
+}
+.story h3 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 11px;
+  letter-spacing: -.35px;
+}
+.story.large h3 {
+  font-size: 25px;
+}
+.story p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ds-ink-2);
+  margin: 0 0 12px;
+}
+.read {
+  font-size: 10px;
+  letter-spacing: .4px;
+  border-bottom: 1px solid var(--ds-hairline);
+  padding-bottom: 4px;
+}
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid var(--ds-hairline);
+}
+.mini-grid > a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.mini-grid img {
+  width: 88px;
+  height: 104px;
+  object-fit: cover;
+}
+.mini-grid h3 {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.mini-grid .eyebrow {
+  font-size: 9px;
+}
+.latest {
+  background: #edf2fc;
+  padding-top: 43px;
+}
+.search {
+  display: block;
+  min-width: 210px;
+}
+.search span {
+  font-size: 10px;
+  display: block;
+  margin-bottom: 6px;
+}
+.search input {
+  background: white;
+  border: 1px solid var(--ds-hairline);
+  padding: 12px;
+  font-size: 12px;
+  width: 100%;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+.categories button,
+.pagination button,
+.empty button {
+  border: 1px solid var(--ds-hairline);
+  background: white;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 11px;
+  border-radius: 24px;
+  color: var(--ds-ink);
+}
+button.selected {
+  background: var(--ds-ink);
+  color: white;
+  border-color: var(--ds-ink);
+}
+.results {
+  font-size: 11px;
+  color: var(--ds-ink-2);
+  margin: 12px 0 26px;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 38px 22px;
+}
+.story-grid .story h3 {
+  font-size: 20px;
+}
+.story-grid .story img {
+  height: 255px;
+}
+.story-grid .eyebrow span {
+  display: none;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+.pagination button:disabled {
+  opacity: .4;
+  cursor: default;
+}
+.money-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  padding: 55px 70px;
+}
+.money-strip img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+.money-strip p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ds-ink-2);
+}
+.newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  padding: 45px 40px;
+  background: #edf2fc;
+  align-items: center;
+}
+.newsletter h2 {
+  font-size: 32px;
+}
+.newsletter p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 14px 0;
+}
+.newsletter label {
+  font-size: 11px;
+  display: block;
+  margin-bottom: 9px;
+}
+.emailrow {
+  display: flex;
+  background: white;
+}
+.emailrow input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid var(--ds-hairline);
+  font-size: 12px;
+}
+.emailrow button {
+  white-space: nowrap;
+  background: var(--ds-ink);
+  color: white;
+  border: 0;
+  padding: 13px 19px;
+  font-size: 12px;
+}
+.newsletter .micro {
+  font-size: 10px;
+  min-height: 18px;
+  color: var(--ds-ink-2);
+}
+footer {
+  padding: 35px 40px 20px;
+}
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--ds-hairline);
+}
+.footer-main p {
+  font-size: 12px;
+  color: var(--ds-ink-2);
+  line-height: 1.7;
+}
+.footer-main > a {
+  font-size: 11px;
+}
+.article {
+  padding: 32px 40px;
+}
+.back {
+  font-size: 11px;
+  display: inline-block;
+  min-height: 44px;
+}
+.article-head {
+  max-width: 800px;
+  margin: 12px auto 30px;
+  text-align: center;
+}
+.article-head h1 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.7px;
+  margin: 20px 0;
+}
+.lede {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ds-ink-2);
+}
+.byline {
+  font-size: 11px;
+  margin-top: 22px;
+}
+.byline span {
+  margin-left: 30px;
+  color: var(--ds-ink-2);
+}
+.article-photo {
+  margin: 0;
+}
+.article-photo img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+.article-photo figcaption {
+  font-size: 10px;
+  color: var(--ds-ink-2);
+  line-height: 1.5;
+  padding: 10px 0;
+}
+.article-body {
+  max-width: 680px;
+  margin: 35px auto;
+}
+.article-body section {
+  margin-bottom: 29px;
+}
+.article-body h2 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 28px;
+  letter-spacing: -.4px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+.article-body p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ds-ink-2);
+}
+.faq {
+  border-top: 1px solid var(--ds-hairline);
+  padding-top: 27px;
+}
+.faq details {
+  border-bottom: 1px solid var(--ds-hairline);
+  padding: 15px 0;
+}
+.faq summary {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 35px;
+}
+.faq p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.article-cta {
+  padding: 30px;
+  background: #edf2fc;
+  margin: 30px 0;
+}
+.article-cta a {
+  font-size: 13px;
+  border-bottom: 1px solid;
+}
+.sources {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--ds-ink-2);
+}
+.sources p {
+  font-size: 12px;
+}
+.sources summary {
+  cursor: pointer;
+  min-height: 44px;
+}
+.sources a {
+  text-decoration: underline;
+}
+.related {
+  background: #edf2fc;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.empty {
+  text-align: center;
+  padding: 50px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--ds-teal);
+  outline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .topbar {
+    padding: 20px 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .topbar nav {
+    order: 3;
+    width: 100%;
+    gap: 22px;
+  }
+  .topbar nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .masthead {
+    padding: 0 24px 30px;
+  }
+  .hero {
+    min-height: 390px;
+  }
+  .heroimage {
+    min-height: 390px;
+  }
+  .herocopy {
+    padding: 30px;
+  }
+  .herocopy h1,
+  .herocopy h2 {
+    font-size: 40px !important;
+  }
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured,
+  .latest,
+  .related {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .mini-grid {
+    grid-template-columns: 1fr;
+  }
+  .mini-grid img {
+    width: 100px;
+    height: 90px;
+  }
+  .money-strip {
+    padding: 35px 24px;
+    gap: 25px;
+  }
+  .newsletter {
+    padding: 35px 24px;
+  }
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .related-grid > .story:last-child {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .topbar {
+    padding: 18px 20px;
+  }
+  .brand {
+    font-size: 29px;
+  }
+  .topbar nav {
+    gap: 4px 21px;
+    font-size: 12px;
+  }
+  .topbar > a:last-child {
+    font-size: 11px;
+  }
+  .masthead {
+    padding: 0 20px 22px;
+  }
+  .mast-label {
+    padding: 16px 0;
+    font-size: 10px;
+  }
+  .mast-label span {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .heroimage {
+    min-height: 275px;
+  }
+  .herocopy {
+    padding: 30px 25px;
+  }
+  .herocopy h1,
+  .herocopy h2 {
+    font-size: 38px !important;
+    letter-spacing: -1.5px !important;
+  }
+  .herocopy p {
+    font-size: 14px !important;
+  }
+  .hero-foot {
+    margin-top: 24px;
+  }
+  .featured,
+  .latest,
+  .related {
+    padding: 25px 20px 35px;
+  }
+  .section-title {
+    display: block;
+    margin-bottom: 22px;
+  }
+  .section-title h2 {
+    font-size: 31px;
+    margin-bottom: 15px;
+  }
+  .section-title > a {
+    display: inline-block;
+  }
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .story.large img {
+    height: 270px;
+  }
+  .story.large h3 {
+    font-size: 24px;
+  }
+  .mini-grid {
+    gap: 22px;
+    margin-top: 30px;
+    padding-top: 24px;
+  }
+  .mini-grid .eyebrow {
+    font-size: 9px;
+  }
+  .story-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 15px;
+  }
+  .story-grid .story img {
+    height: 185px;
+  }
+  .story-grid .story h3 {
+    font-size: 17px;
+  }
+  .story-grid .eyebrow {
+    font-size: 8px;
+    letter-spacing: .7px;
+  }
+  .story-grid .photo-mark {
+    display: none;
+  }
+  .search {
+    margin-top: 24px;
+  }
+  .categories {
+    gap: 7px;
+  }
+  .categories button {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+  .pagination {
+    gap: 7px;
+  }
+  .pagination button {
+    padding: 10px 12px;
+  }
+  .money-strip {
+    grid-template-columns: 1fr;
+    padding: 35px 20px;
+    gap: 25px;
+  }
+  .money-strip h2 {
+    font-size: 31px;
+  }
+  .money-strip img {
+    height: 290px;
+  }
+  .newsletter {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+    gap: 22px;
+  }
+  .newsletter h2 {
+    font-size: 30px;
+  }
+  .emailrow button {
+    padding: 12px;
+  }
+  .footer-main {
+    display: block;
+  }
+  .footer-main p {
+    margin: 20px 0;
+  }
+  footer {
+    padding: 30px 20px 20px;
+  }
+  .article {
+    padding: 23px 20px;
+  }
+  .article-head {
+    margin-top: 12px;
+    text-align: left;
+  }
+  .article-head h1 {
+    font-size: 37px;
+    letter-spacing: -1.2px;
+  }
+  .lede {
+    font-size: 15px;
+  }
+  .article-photo img {
+    height: 270px;
+  }
+  .article-body {
+    margin-top: 25px;
+  }
+  .article-body h2 {
+    font-size: 27px;
+  }
+  .article-body p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .article-cta {
+    padding: 24px;
+  }
+  .related-grid {
+    gap: 16px;
+  }
+  .related-grid .story img {
+    height: 180px;
+  }
+  .related-grid .story h3 {
+    font-size: 18px;
+  }
+  .related-grid .photo-mark {
+    display: none;
+  }
+  .byline {
+    font-size: 10px;
+  }
+  .photo-mark {
+    font-size: 8px;
+  }
+}
+.collage {
+  position: relative;
+  padding: 55px 0 75px;
+  overflow: hidden;
+}
+.collage-photos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+  transform: rotate(-2deg);
+  width: 115%;
+  margin-left: -7.5%;
+}
+.collage-photos img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+}
+.collage-caption {
+  position: absolute;
+  left: 39%;
+  right: 8%;
+  top: 39%;
+  background: white;
+  padding: 24px 28px;
+  box-shadow: 0 6px 25px #00000012;
+}
+.tags {
+  display: flex;
+  gap: 8px;
+}
+.tags span {
+  background: #edf2fc;
+  padding: 5px 10px;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+.collage-caption h2 {
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 13px 0;
+}
+.collage-read {
+  font-size: 10px;
+}
+.collage-credit {
+  position: absolute;
+  bottom: 24px;
+  left: 40px;
+  font-size: 9px;
+  color: var(--ds-ink-2);
+}
+@media (max-width: 600px) {
+  .collage {
+    padding: 35px 0 80px;
+  }
+  .collage-photos {
+    gap: 12px;
+    width: 185%;
+    margin-left: -40%;
+  }
+  .collage-photos img {
+    height: 290px;
+  }
+  .collage-caption {
+    left: 15%;
+    right: 7%;
+    top: 40%;
+    padding: 17px;
+  }
+  .collage-caption h2 {
+    font-size: 18px;
+  }
+  .collage-credit {
+    left: 20px;
+    font-size: 8px;
+    bottom: 28px;
+  }
+}
+.category-page {
+  padding: 32px 40px 55px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 26px;
+  margin-top: 35px;
+}
+@media (max-width: 600px) {
+  .category-page {
+    padding: 24px 20px 40px;
+  }
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+.magazine {
+  color: #0d0d0d;
+  background: #fff;
+}
+.brand img {
+  width: 104px;
+  height: auto;
+  display: block;
+}
+.brand span {
+  color: #6633c9;
+  letter-spacing: 3.4px;
+}
+.hero,
+.newsletter,
+.related,
+.latest,
+.article-cta {
+  background: #f4effd;
+}
+.pill,
+.emailrow button {
+  background: #b2c532;
+  color: #0d0d0d !important;
+  font-weight: 600;
+}
+button.selected {
+  background: #6633c9;
+  border-color: #6633c9;
+  color: white;
+}
+.tags span {
+  background: #eee6fd;
+  color: #5424ab;
+}
+.topbar nav a:hover,
+.read,
+.section-title > a {
+  color: #6633c9;
+}
+.herocopy h1,
+.herocopy h2,
+.section-title h2,
+.newsletter h2,
+.money-strip h2,
+.article-head h1,
+.article-body h2,
+.category-page h1 {
+  font-family: "KMR Melange Grotesk", sans-serif !important;
+  letter-spacing: -1px;
+}
+.article-body h2 {
+  font-weight: 600;
+}
+.herocopy h1 {
+  font-weight: 600 !important;
+}
+.article-head h1 {
+  font-weight: 600;
+}
+.category-page h1 {
+  font-weight: 600 !important;
+}
+.newsletter h2,
+.section-title h2,
+.money-strip h2 {
+  font-weight: 600;
+}
+.brand {
+  letter-spacing: 0;
+}
+.topbar nav {
+  gap: 18px;
+}
+.newsletter .emailrow button:hover,
+.pill:hover {
+  background: #a0b426;
+}
+
+
+
+.magazine,
+.herocopy h1,
+.herocopy h2,
+.section-title h2,
+.newsletter h2,
+.money-strip h2,
+.article-head h1,
+.article-body h2,
+.category-page h1 {
+  font-family:
+    zikpe,
+    "KMR Melange Grotesk",
+    sans-serif !important;
+}
+
+html,body,#root{margin:0;min-height:100%}body{background:var(--ds-page)}.file-card:has(.magazine){max-width:1280px!important;padding:0!important}.magazine{color:var(--ds-ink);font-family:'KMR Melange Grotesk',sans-serif}.magazine *{box-sizing:border-box}.magazine a{color:inherit;text-decoration:none}.magazine button,.magazine input{font:inherit}.magazine button{cursor:pointer}.topbar{display:flex;align-items:center;justify-content:space-between;padding:24px 40px;border-bottom:1px solid var(--ds-hairline);gap:28px}.brand{font-size:31px;font-weight:700;letter-spacing:-1.7px;white-space:nowrap}.brand span{display:block;font-size:9px;letter-spacing:3.4px;margin-top:4px}.topbar nav{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;font-weight:600}.topbar>a:last-child{font-size:12px;white-space:nowrap}.masthead{padding:0 40px 44px}.mast-label{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;padding:20px 0;display:flex;justify-content:space-between}.mast-label span{font-size:11px;letter-spacing:0;text-transform:none;color:var(--ds-ink-2)}.hero{display:grid;grid-template-columns:1.08fr 1fr;background:#edf2fc;min-height:450px}.heroimage{position:relative;min-height:450px}.heroimage img{width:100%;height:100%;position:absolute;object-fit:cover}.photo-mark{position:absolute;bottom:12px;left:12px;font-size:9px;background:#fffdf6dd;padding:4px 7px;color:#3a3430}.herocopy{padding:44px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{display:block;letter-spacing:1.4px;text-transform:uppercase;font-size:10px;font-weight:600;line-height:1.8}.herocopy h1,.herocopy h2{font-size:48px!important;line-height:1.08!important;letter-spacing:-1.8px!important;margin:18px 0 22px!important;font-weight:800!important}.herocopy p{font-size:16px!important;line-height:1.7!important}.herocopy header{padding:0!important}.pill{display:inline-flex;align-items:center;min-height:46px;padding:12px 23px;background:var(--ds-ink);color:white!important;font-size:12px;font-weight:600;border-radius:30px;margin-top:20px}.hero-foot{margin-top:28px;font-size:10px;color:var(--ds-ink-2)}.featured,.latest,.related{padding:28px 40px 54px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:27px}.section-title h2,.newsletter h2,.money-strip h2{font-family:Aime,Georgia,serif;font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.15;margin:8px 0}.section-title a{font-size:12px;border-bottom:1px solid;padding:6px 0;white-space:nowrap}.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.story{display:block;min-width:0}.photo{position:relative;overflow:hidden}.story img{width:100%;height:244px;object-fit:cover;display:block;transition:transform .4s}.story:hover img{transform:scale(1.035)}.story.large img{height:320px}.story .eyebrow{margin:16px 0 7px}.story .eyebrow span{letter-spacing:0;text-transform:none;font-weight:400;color:var(--ds-ink-2);margin-left:4px}.story h3{font-size:21px;font-weight:600;line-height:1.25;margin:0 0 11px;letter-spacing:-.35px}.story.large h3{font-size:25px}.story p{font-size:13px;line-height:1.65;color:var(--ds-ink-2);margin:0 0 12px}.read{font-size:10px;letter-spacing:.4px;border-bottom:1px solid var(--ds-hairline);padding-bottom:4px}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:38px;padding-top:30px;border-top:1px solid var(--ds-hairline)}.mini-grid>a{display:flex;gap:14px;align-items:center}.mini-grid img{width:88px;height:104px;object-fit:cover}.mini-grid h3{font-size:15px;line-height:1.4;font-weight:600;margin:5px 0}.mini-grid .eyebrow{font-size:9px}.latest{background:#edf2fc;padding-top:43px}.search{display:block;min-width:210px}.search span{font-size:10px;display:block;margin-bottom:6px}.search input{background:white;border:1px solid var(--ds-hairline);padding:12px;font-size:12px;width:100%}.categories{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.categories button,.pagination button,.empty button{border:1px solid var(--ds-hairline);background:white;min-height:44px;padding:10px 14px;font-size:11px;border-radius:24px;color:var(--ds-ink)}button.selected{background:var(--ds-ink);color:white;border-color:var(--ds-ink)}.results{font-size:11px;color:var(--ds-ink-2);margin:12px 0 26px}.story-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:38px 22px}.story-grid .story h3{font-size:20px}.story-grid .story img{height:255px}.story-grid .eyebrow span{display:none}.pagination{display:flex;justify-content:center;gap:10px;margin-top:40px}.pagination button:disabled{opacity:.4;cursor:default}.money-strip{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px;padding:55px 70px}.money-strip img{width:100%;height:320px;object-fit:cover}.money-strip p{font-size:14px;line-height:1.7;color:var(--ds-ink-2)}.newsletter{display:grid;grid-template-columns:1fr 1fr;gap:42px;padding:45px 40px;background:#edf2fc;align-items:center}.newsletter h2{font-size:32px}.newsletter p{font-size:13px;line-height:1.6;margin:14px 0}.newsletter label{font-size:11px;display:block;margin-bottom:9px}.emailrow{display:flex;background:white}.emailrow input{width:100%;min-width:0;padding:15px;border:1px solid var(--ds-hairline);font-size:12px}.emailrow button{white-space:nowrap;background:var(--ds-ink);color:white;border:0;padding:13px 19px;font-size:12px}.newsletter .micro{font-size:10px;min-height:18px;color:var(--ds-ink-2)}footer{padding:35px 40px 20px}.footer-main{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:25px;border-bottom:1px solid var(--ds-hairline)}.footer-main p{font-size:12px;color:var(--ds-ink-2);line-height:1.7}.footer-main>a{font-size:11px}.article{padding:32px 40px}.back{font-size:11px;display:inline-block;min-height:44px}.article-head{max-width:800px;margin:12px auto 30px;text-align:center}.article-head h1{font-family:Aime,Georgia,serif;font-size:48px;font-weight:800;line-height:1.08;letter-spacing:-1.7px;margin:20px 0}.lede{font-size:17px;line-height:1.65;color:var(--ds-ink-2)}.byline{font-size:11px;margin-top:22px}.byline span{margin-left:30px;color:var(--ds-ink-2)}.article-photo{margin:0}.article-photo img{width:100%;height:440px;object-fit:cover;display:block}.article-photo figcaption{font-size:10px;color:var(--ds-ink-2);line-height:1.5;padding:10px 0}.article-body{max-width:680px;margin:35px auto}.article-body section{margin-bottom:29px}.article-body h2{font-family:Aime,Georgia,serif;font-size:28px;letter-spacing:-.4px;font-weight:400;line-height:1.25;margin:0 0 14px}.article-body p{font-size:15px;line-height:1.85;color:var(--ds-ink-2)}.faq{border-top:1px solid var(--ds-hairline);padding-top:27px}.faq details{border-bottom:1px solid var(--ds-hairline);padding:15px 0}.faq summary{font-size:14px;font-weight:600;cursor:pointer;min-height:35px}.faq p{font-size:14px;margin:5px 0}.article-cta{padding:30px;background:#edf2fc;margin:30px 0}.article-cta a{font-size:13px;border-bottom:1px solid}.sources{font-size:11px;line-height:1.8;color:var(--ds-ink-2)}.sources p{font-size:12px}.sources summary{cursor:pointer;min-height:44px}.sources a{text-decoration:underline}.related{background:#edf2fc}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.empty{text-align:center;padding:50px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--ds-teal);outline-offset:4px}
+@media(max-width:900px){.topbar{padding:20px 24px;gap:20px;flex-wrap:wrap}.topbar nav{order:3;width:100%;gap:22px}.topbar nav a{min-height:44px;display:flex;align-items:center}.masthead{padding:0 24px 30px}.hero{min-height:390px}.heroimage{min-height:390px}.herocopy{padding:30px}.herocopy h1,.herocopy h2{font-size:40px!important}.story-grid{grid-template-columns:repeat(2,1fr)}.featured,.latest,.related{padding-left:24px;padding-right:24px}.mini-grid{grid-template-columns:1fr}.mini-grid img{width:100px;height:90px}.money-strip{padding:35px 24px;gap:25px}.newsletter{padding:35px 24px}.related-grid{grid-template-columns:repeat(2,1fr)}.related-grid>.story:last-child{display:none}}
+@media(max-width:600px){.topbar{padding:18px 20px}.brand{font-size:29px}.topbar nav{gap:4px 21px;font-size:12px}.topbar>a:last-child{font-size:11px}.masthead{padding:0 20px 22px}.mast-label{padding:16px 0;font-size:10px}.mast-label span{display:none}.hero{grid-template-columns:1fr}.heroimage{min-height:275px}.herocopy{padding:30px 25px}.herocopy h1,.herocopy h2{font-size:38px!important;letter-spacing:-1.5px!important}.herocopy p{font-size:14px!important}.hero-foot{margin-top:24px}.featured,.latest,.related{padding:25px 20px 35px}.section-title{display:block;margin-bottom:22px}.section-title h2{font-size:31px;margin-bottom:15px}.section-title>a{display:inline-block}.featured-grid{grid-template-columns:1fr;gap:30px}.story.large img{height:270px}.story.large h3{font-size:24px}.mini-grid{gap:22px;margin-top:30px;padding-top:24px}.mini-grid .eyebrow{font-size:9px}.story-grid{grid-template-columns:1fr 1fr;gap:28px 15px}.story-grid .story img{height:185px}.story-grid .story h3{font-size:17px}.story-grid .eyebrow{font-size:8px;letter-spacing:.7px}.story-grid .photo-mark{display:none}.search{margin-top:24px}.categories{gap:7px}.categories button{padding:9px 12px;font-size:10px}.pagination{gap:7px}.pagination button{padding:10px 12px}.money-strip{grid-template-columns:1fr;padding:35px 20px;gap:25px}.money-strip h2{font-size:31px}.money-strip img{height:290px}.newsletter{grid-template-columns:1fr;padding:32px 20px;gap:22px}.newsletter h2{font-size:30px}.emailrow button{padding:12px}.footer-main{display:block}.footer-main p{margin:20px 0}footer{padding:30px 20px 20px}.article{padding:23px 20px}.article-head{margin-top:12px;text-align:left}.article-head h1{font-size:37px;letter-spacing:-1.2px}.lede{font-size:15px}.article-photo img{height:270px}.article-body{margin-top:25px}.article-body h2{font-size:27px}.article-body p{font-size:14px;line-height:1.85}.article-cta{padding:24px}.related-grid{gap:16px}.related-grid .story img{height:180px}.related-grid .story h3{font-size:18px}.related-grid .photo-mark{display:none}.byline{font-size:10px}.photo-mark{font-size:8px}}
+.collage{position:relative;padding:55px 0 75px;overflow:hidden}.collage-photos{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;transform:rotate(-2deg);width:115%;margin-left:-7.5%}.collage-photos img{width:100%;height:370px;object-fit:cover}.collage-caption{position:absolute;left:39%;right:8%;top:39%;background:white;padding:24px 28px;box-shadow:0 6px 25px #00000012}.tags{display:flex;gap:8px}.tags span{background:#edf2fc;padding:5px 10px;font-size:9px;letter-spacing:1.2px;font-weight:600}.collage-caption h2{font-size:21px;line-height:1.4;font-weight:600;margin:13px 0}.collage-read{font-size:10px}.collage-credit{position:absolute;bottom:24px;left:40px;font-size:9px;color:var(--ds-ink-2)}@media(max-width:600px){.collage{padding:35px 0 80px}.collage-photos{gap:12px;width:185%;margin-left:-40%}.collage-photos img{height:290px}.collage-caption{left:15%;right:7%;top:40%;padding:17px}.collage-caption h2{font-size:18px}.collage-credit{left:20px;font-size:8px;bottom:28px}}
+.category-page{padding:32px 40px 55px}.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 26px;margin-top:35px}@media(max-width:600px){.category-page{padding:24px 20px 40px}.category-grid{grid-template-columns:1fr;gap:32px}}
+/* ZikPe brand skin, inspected on its public homepage. */
+.magazine{color:#0d0d0d;background:#fff}.brand img{width:104px;height:auto;display:block}.brand span{color:#6633c9;letter-spacing:3.4px}.hero,.newsletter,.related,.latest,.article-cta{background:#f4effd}.pill,.emailrow button{background:#b2c532;color:#0d0d0d!important;font-weight:600}button.selected{background:#6633c9;border-color:#6633c9;color:white}.tags span{background:#eee6fd;color:#5424ab}.topbar nav a:hover,.read,.section-title>a{color:#6633c9}.herocopy h1,.herocopy h2,.section-title h2,.newsletter h2,.money-strip h2,.article-head h1,.article-body h2,.category-page h1{font-family:'KMR Melange Grotesk',sans-serif!important;letter-spacing:-1px}.article-body h2{font-weight:600}.herocopy h1{font-weight:600!important}.article-head h1{font-weight:600}.category-page h1{font-weight:600!important}.newsletter h2,.section-title h2,.money-strip h2{font-weight:600}.brand{letter-spacing:0}.topbar nav{gap:18px}.newsletter .emailrow button:hover,.pill:hover{background:#a0b426}
+
+
+.magazine,.herocopy h1,.herocopy h2,.section-title h2,.newsletter h2,.money-strip h2,.article-head h1,.article-body h2,.category-page h1{font-family:zikpe,Arial,sans-serif!important}
+</style><style>:root{--ds-page:#fff;--ds-ink:#131313;--ds-ink-2:#555;--ds-hairline:#e8e8e8;--ds-accent:#6633c9}.file-card{margin:auto;max-width:1280px}.file-header h1{font-size:40px;line-height:1.1;margin:20px 0}.file-header p{line-height:1.6}.file-closing{padding:25px 40px;font-size:12px;color:#555}body{width:100%!important}</style><style>.herocopy .file-header{padding:0}.herocopy h1{font-size:44px;line-height:1.07;margin:20px 0 40px}.herocopy p{font-size:16px;line-height:1.6}.category-page h1{font-size:36px}.file-closing{border-top:1px solid #eee}.file-closing p{margin:0}@media(max-width:640px){.herocopy h1{font-size:38px}.file-closing{padding:25px 20px}}</style><link href="/zikpe-theme.css" rel="stylesheet"/><title>Eat in India: travel stories | ZikPe Journal</title><meta content="Explore ZikPe eat stories for your India trip. Original guides to places, local experiences and practical travel details for visitors." name="description"/><meta content="index, follow, max-image-preview:large" name="robots"/><link href="https://zikpe-journal.ashwatthama710.workers.dev/category/eat/" rel="canonical"/><meta content="Eat in India: travel stories | ZikPe Journal" property="og:title"/><meta content="Explore ZikPe eat stories for your India trip. Original guides to places, local experiences and practical travel details for visitors." property="og:description"/><meta content="website" property="og:type"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/category/eat/" property="og:url"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/assets/fresh-food.jpg" property="og:image"/><meta content="ZikPe Journal" property="og:site_name"/><meta content="en_IN" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Eat in India: travel stories | ZikPe Journal" name="twitter:title"/><meta content="Explore ZikPe eat stories for your India trip. Original guides to places, local experiences and practical travel details for visitors." name="twitter:description"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/assets/fresh-food.jpg" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Eat in India: travel stories | ZikPe Journal", "description": "Explore ZikPe eat stories for your India trip. Original guides to places, local experiences and practical travel details for visitors.", "url": "https://zikpe-journal.ashwatthama710.workers.dev/category/eat/", "inLanguage": "en"}</script></head><body><main class="file-card" data-width="fluid"><div class="magazine"><header class="topbar"><a aria-label="ZikPe journal home" class="brand" href="/"><img alt="ZikPe" decoding="async" src="/assets/666854f1bf42a8c3.png"/><span>JOURNAL</span></a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/category/eat">Eat</a><a href="/category/see">See</a><a href="/category/stay">Stay</a><a href="/category/shop">Shop</a><a href="/category/guides">Guides</a><a href="/category/upi">UPI for Tourists</a><a href="/category/culture">Culture</a></nav><a class="file-link" href="https://zikpe.com" rel="noopener noreferrer" target="_blank">Discover ZikPe ↗</a></header><section class="category-page"><a class="back" href="/">← All stories</a><header class="file-header"><h1 class="file-title">Eat</h1><p class="file-intro">Original travel stories and practical guides for your time in India.</p></header><div class="category-grid"><a class="story" href="/stories/mahesh-lunch-home-mumbai-a-considered-seafood-meal/"><div class="photo"><img alt="Conceptual editorial illustration for Seafood in Mumbai: a Fort meal at Mahesh Lunch Home" decoding="async" loading="lazy" src="/assets/mumbai-seafood-twentyeight.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>Seafood in Mumbai: a Fort meal at Mahesh Lunch Home</h3><p>Choose the fish, preparation and portion, then ask for the complete price before a larger seafood order.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/olive-beach-bengaluru-a-considered-meal-beyond-breakfast/"><div class="photo"><img alt="Conceptual editorial illustration for Olive Beach, Bengaluru: a slower meal beyond the breakfast plan" decoding="async" loading="lazy" src="/assets/bengaluru-meal-twentyseven.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>Olive Beach, Bengaluru: a slower meal beyond the breakfast plan</h3><p>Consider the courtyard setting and current menu for a meal of its own, not a citywide best-of claim.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/goa-feni-cashew-coconut-and-a-considered-tasting/"><div class="photo"><img alt="Conceptual editorial illustration for Goa feni: understand the drink before the tasting" decoding="async" loading="lazy" src="/assets/goa-feni-twentyseven.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>Goa feni: understand the drink before the tasting</h3><p>Cashew and coconut feni have different starting materials. A tasting should remain an informed adult choice.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/kolkata-fish-mustard-steaming-and-a-meal-with-rice/"><div class="photo"><img alt="Conceptual editorial illustration for Kolkata fish: choose the preparation before the famous name" decoding="async" loading="lazy" src="/assets/kolkata-fish-twentytwo.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>Kolkata fish: choose the preparation before the famous name</h3><p>A mustard-led fish meal, a steamed preparation or a lighter broth gives a Kolkata lunch a different direction.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/chennai-filter-coffee-and-a-jigarthanda-pause/"><div class="photo"><img alt="Conceptual editorial illustration for Chennai drinks: filter coffee and a jigarthanda pause" decoding="async" loading="lazy" src="/assets/chennai-drinks-twentytwo.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>Chennai drinks: filter coffee and a jigarthanda pause</h3><p>Two different drinks for a Chennai food day, with Madurai’s jigarthanda identity kept clear.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/panaji-breakfast-coffee-at-caravela-and-time-for-the-town/"><div class="photo"><img alt="Conceptual editorial illustration for A Panaji breakfast: coffee at Caravela, then time for the town" decoding="async" loading="lazy" src="/assets/goa-breakfast-twentytwo.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>A Panaji breakfast: coffee at Caravela, then time for the town</h3><p>A town-led Goa morning can begin with coffee and a considered breakfast rather than a beachside brunch checklist.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/delhi-dinner-bukhara-or-indian-accent/"><div class="photo"><img alt="Conceptual editorial illustration for Delhi dinner: Bukhara or Indian Accent, for different reasons" decoding="async" loading="lazy" src="/assets/delhi-dinner-twentytwo.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>Delhi dinner: Bukhara or Indian Accent, for different reasons</h3><p>Choose a tandoor-led meal or an inventive Indian menu before comparing reservations.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/lucknow-chaat-basket-tikki-and-a-small-order/"><div class="photo"><img alt="Conceptual editorial illustration for Lucknow chaat: a basket or a tikki, without turning it into a race" decoding="async" loading="lazy" src="/assets/lucknow-chaat-twentytwo.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>Lucknow chaat: a basket or a tikki, without turning it into a race</h3><p>A focused chaat pause in Hazratganj, starting with Royal Cafe’s current menu rather than a citywide ranking.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/agra-petha-a-small-taste-and-a-careful-gift-box/"><div class="photo"><img alt="Conceptual editorial illustration for Agra petha: taste a little, choose the box carefully" decoding="async" loading="lazy" src="/assets/agra-petha-twentytwo.webp"/></div><div class="eyebrow">Eat <span>• 4 min read</span></div><h3>Agra petha: taste a little, choose the box carefully</h3><p>A sweet stop with the ingredients, storage and travel conditions understood before you buy a large box.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/old-delhi-food-natraj-karim-and-a-kulfi-finish/"><div class="photo"><img alt="Conceptual editorial illustration for Old Delhi food: a chaat stop, a proper meal and a kulfi finish" decoding="async" loading="lazy" src="/assets/old-delhi-food-eighteen.webp"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Old Delhi food: a chaat stop, a proper meal and a kulfi finish</h3><p>Build a modest food walk around Chandni Chowk and Jama Masjid, with clear stops rather than a promise to eat everything.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/old-mumbai-restaurants-britannia-or-leopold/"><div class="photo"><img alt="Conceptual editorial illustration for Old Mumbai tables: Britannia or Leopold, with a meal of its own" decoding="async" loading="lazy" src="/assets/mumbai-old-tables-eighteen.webp"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Old Mumbai tables: Britannia or Leopold, with a meal of its own</h3><p>Choose a Ballard Estate lunch or a Colaba cafe visit. History is a reason to look closer, not a guarantee about the meal.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/goan-food-fish-curry-xacuti-vindaloo-and-bebinca/"><div class="photo"><img alt="Conceptual editorial illustration for A first Goan meal: curry, coconut and a sweeter finish" decoding="async" loading="lazy" src="/assets/goan-food-eighteen.webp"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>A first Goan meal: curry, coconut and a sweeter finish</h3><p>Use a few dishes to find your way into Goan food, without reducing it to heat, beach shacks or one community’s cooking.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/jaipur-cafes-anokhi-or-tapri-for-a-slower-break/"><div class="photo"><img alt="Conceptual editorial illustration for Jaipur cafe pauses: Anokhi or a cup at Tapri" decoding="async" loading="lazy" src="/assets/jaipur-cafes-eighteen.webp"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Jaipur cafe pauses: Anokhi or a cup at Tapri</h3><p>Choose the cafe for the food, tea and location you need, rather than making another cross-city stop for a photograph.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/hyderabad-desserts-qubani-ka-meetha-and-double-ka-meetha/"><div class="photo"><img alt="Conceptual editorial illustration for Hyderabad’s sweet ending: apricot or bread, not just another bite" decoding="async" loading="lazy" src="/assets/hyderabad-desserts-eighteen.webp"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Hyderabad’s sweet ending: apricot or bread, not just another bite</h3><p>Qubani ka meetha and double ka meetha offer different textures. Give dessert room after the biryani, and ask about the ingredients.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/kolkata-tea-bhaar-flurys-and-a-pause-for-adda/"><div class="photo"><img alt="Conceptual editorial illustration for Kolkata tea: a street-side cup or time at Flurys" decoding="async" loading="lazy" src="/assets/kolkata-tea-eighteen.webp"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Kolkata tea: a street-side cup or time at Flurys</h3><p>A milk-tea stop and a seated tea-room visit offer different pauses. Choose the kind of conversation and cup you want.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/villa-maya-thiruvananthapuram-a-heritage-dining-plan/"><div class="photo"><img alt="Conceptual editorial illustration for Villa Maya, Thiruvananthapuram: a heritage dining plan" decoding="async" loading="lazy" src="/assets/villa-maya-fifteen.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Villa Maya, Thiruvananthapuram: a heritage dining plan</h3><p>A Kerala restaurant with a heritage setting and a wider culinary conversation. Make the meal the occasion, without assuming that the building tells you the whole menu.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/reading-an-indian-menu-a-better-first-order/"><div class="photo"><img alt="Conceptual editorial illustration for Reading an Indian menu: a better first order" decoding="async" loading="lazy" src="/assets/menu-thirteen.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Reading an Indian menu: a better first order</h3><p>Start with the shape of the meal, ask about the ingredients that matter, and resist ordering every unfamiliar name at once.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/hyderabad-breakfast-beyond-the-biryani-plan/"><div class="photo"><img alt="Conceptual editorial illustration for Hyderabad breakfast: beyond the biryani plan" decoding="async" loading="lazy" src="/assets/hyderabad-breakfast-thirteen.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Hyderabad breakfast: beyond the biryani plan</h3><p>Khichdi, kheema, paya or a simpler idli-and-dosa morning: choose the breakfast that fits your appetite, not a city stereotype.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/kolkata-sweets-sandesh-rasgulla-and-a-spoon-of-mishti-doi/"><div class="photo"><img alt="Conceptual editorial illustration for Kolkata sweets: sandesh, rasgulla and a spoon of mishti doi" decoding="async" loading="lazy" src="/assets/kolkata-sweets-thirteen.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Kolkata sweets: sandesh, rasgulla and a spoon of mishti doi</h3><p>A small tasting can tell you more than a large gift box. Choose by texture, ingredients and how soon you will eat what you buy.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/mango-dishes-in-india-ripe-sweet-raw-and-tangy/"><div class="photo"><img alt="Conceptual editorial illustration for Mango dishes in India: ripe and sweet, raw and tangy" decoding="async" loading="lazy" src="/assets/mango-thirteen.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Mango dishes in India: ripe and sweet, raw and tangy</h3><p>Aamras, amrakhand, aam panna and savoury mango preparations show why the fruit is more than a dessert topping.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/biryani-in-hyderabad-lucknow-and-kolkata-what-to-notice/"><div class="photo"><img alt="Conceptual editorial illustration for Biryani in Hyderabad, Lucknow and Kolkata: what to notice" decoding="async" loading="lazy" src="/assets/biryani-thirteen.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Biryani in Hyderabad, Lucknow and Kolkata: what to notice</h3><p>Compare aroma, texture and the whole serving instead of turning three biryani traditions into a contest with one winner.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/kochi-breakfast-puttu-appam-and-idiyappam/"><div class="photo"><img alt="Conceptual editorial illustration for Kochi breakfast: puttu, appam and idiyappam" decoding="async" loading="lazy" src="/assets/kochi-breakfast-thirteen.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Kochi breakfast: puttu, appam and idiyappam</h3><p>Choose the main and its accompaniment together. A simple guide to three Kerala breakfast ideas before a day around Kochi.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/eating-in-pune-misal-simple-meals-and-mastani/"><div class="photo"><img alt="Conceptual editorial illustration for Eating in Pune: misal, a simple meal and room for mastani" decoding="async" loading="lazy" src="/assets/food-pune.jpg"/></div><div class="eyebrow">Food <span>• 4 min read</span></div><h3>Eating in Pune: misal, a simple meal and room for mastani</h3><p>A first food outing can move from a savoury breakfast to a quieter lunch and a dessert drink, without making spice tolerance a competition.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/eating-in-jaipur-dal-baati-churma-heat-and-a-sweet-finish/"><div class="photo"><img alt="Conceptual editorial illustration for Eating in Jaipur: dal baati churma, a careful choice of heat and a sweet finish" decoding="async" loading="lazy" src="/assets/food-jaipur.jpg"/></div><div class="eyebrow">Food <span>• 4 min read</span></div><h3>Eating in Jaipur: dal baati churma, a careful choice of heat and a sweet finish</h3><p>Start with a Rajasthani meal, understand what is in the richer dishes and keep room for a sweet. You do not need to order everything at once.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/bengaluru-breakfast-dosa-idli-and-filter-coffee/"><div class="photo"><img alt="Conceptual editorial illustration for A Bengaluru breakfast: dosa, idli and filter coffee without the rush" decoding="async" loading="lazy" src="/assets/food-bengaluru.jpg"/></div><div class="eyebrow">Food <span>• 4 min read</span></div><h3>A Bengaluru breakfast: dosa, idli and filter coffee without the rush</h3><p>Choose one savoury plate and a coffee, then let the kitchen's version guide your next order. Breakfast does not need to become a queue-hopping contest.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/eating-in-mumbai-a-street-snack-and-a-slower-meal/"><div class="photo"><img alt="Original editorial illustration for Eating in Mumbai: a street snack and a meal worth slowing down for" decoding="async" loading="lazy" src="/assets/food-mumbai.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Eating in Mumbai: a street snack and a meal worth slowing down for</h3><p>Start with vada pav or pav bhaji, then leave room for a seated meal. A first Mumbai food day does not need a famous-stop checklist.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/eating-in-chennai-breakfast-tamil-meal-and-coffee/"><div class="photo"><img alt="Original editorial illustration for Eating in Chennai: breakfast, a Tamil meal and a coffee pause" decoding="async" loading="lazy" src="/assets/food-chennai.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Eating in Chennai: breakfast, a Tamil meal and a coffee pause</h3><p>Use idli, dosa, a regional meal and filter coffee as a gentle introduction, with space to ask what is in your food.</p><span class="read">Read story ↗</span></a><a class="story" href="/stories/eating-in-hyderabad-biryani-sweets-and-room-for-more/"><div class="photo"><img alt="Original editorial illustration for Eating in Hyderabad: biryani, a sweet ending and room for more" decoding="async" loading="lazy" src="/assets/food-hyderabad.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 4 min read</span></div><h3>Eating in Hyderabad: biryani, a sweet ending and room for more</h3><p>A first Hyderabad food day that makes room for biryani, apricot dessert and the dishes beyond the city's most familiar names.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/eating-in-kochi-kerala-flavours-and-a-slower-table"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Eating in Kochi: Kerala flavours and a slower table</h3><p>Treat food as part of the journey, with enough time to ask, taste and enjoy.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/jaipur-on-a-plate-a-first-taste-of-rajasthan"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Jaipur on a plate: a first taste of Rajasthan</h3><p>Choose a few dishes with care, and let the meal set the pace.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/jodhpur-street-food-a-thoughtful-first-food-walk"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Jodhpur street food: a thoughtful first food walk</h3><p>Leave the checklist behind and make a few well-chosen stops.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/lucknow-street-food-make-room-for-more-than-kebabs"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Lucknow street food: make room for more than kebabs</h3><p>Taste the city in small chapters rather than one oversized meal.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/lucknow-kebabs-how-to-choose-a-satisfying-food-stop"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Lucknow kebabs: how to choose a satisfying food stop</h3><p>A guide to the questions that matter more than an unverified top-five list.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/pondicherry-food-bakeries-tamil-meals-and-cafe-pauses"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Pondicherry food: bakeries, Tamil meals and cafe pauses</h3><p>Let the town's different kitchens share the day.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/pune-food-misal-vada-pav-and-a-day-without-rushing"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Pune food: misal, vada pav and a day without rushing</h3><p>Start small and let Pune's food shape the pauses between your plans.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/kolkata-food-a-bengali-meal-a-street-snack-and-something-sweet"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Kolkata food: a Bengali meal, a street snack and something sweet</h3><p>A first food day should give the city's different flavours their own space.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/bengaluru-food-dosas-coffee-and-a-relaxed-evening"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Bengaluru food: dosas, coffee and a relaxed evening</h3><p>Enjoy the city's breakfast tradition without making every meal a queue.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/eating-in-agra-a-meal-a-sweet-and-time-after-the-taj"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Eating in Agra: a meal, a sweet and time after the Taj</h3><p>Make room for food without forcing every stop into the monument schedule.</p><span class="read">Read story ↗</span></a><a class="story large" href="/stories/delhi-food-an-old-delhi-walk-and-a-meal-at-your-own-pace"><div class="photo"><img alt="Original editorial illustration of a vegetarian thali and chai" decoding="async" loading="lazy" src="/assets/fresh-food.jpg"/></div><div class="eyebrow">Food &amp; drink <span>• 2 min read</span></div><h3>Delhi food: an Old Delhi walk and a meal at your own pace</h3><p>Explore the city's food without trying to eat every reputation in a day.</p><span class="read">Read story ↗</span></a></div></section><section class="newsletter"><div><span class="eyebrow">The ZikPe newsletter</span><h2>Get new travel stories in your inbox.</h2><p>Travel ideas. Thoughtful guides. Fewer payment surprises.</p></div><form><label for="email">Email address</label><div class="emailrow"><input id="email" placeholder="you@example.com" required="" type="email"/><button type="button">Subscribe ↗</button></div><p class="micro" role="status">Newsletter design preview. Signup is not connected.</p></form></section><footer><div class="footer-main"><div class="brand"><img alt="ZikPe" decoding="async" src="/assets/666854f1bf42a8c3.png"/><span>JOURNAL</span></div><p>Travel India. Take your time.<br/>Stories for the places, people and payments along the way.</p><a href="/">Back to the journal ↑</a></div><footer class="file-closing">ZikPe Journal. No booking or payments happen on this site.</footer></footer></div></main><script src="/site.js"></script></body></html>
