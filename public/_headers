@@ -6,5 +6,20 @@
 
 /source.zip
   Content-Type: application/zip
-  Content-Disposition: attachment; filename="ZikPe-stays-fifteen-source.zip"
+  Content-Disposition: attachment; filename="zikpe-journal-source.zip"
+  X-Robots-Tag: noindex
+
+/source-assets-a.zip
+  Content-Type: application/zip
+  Content-Disposition: attachment; filename="zikpe-journal-source-assets-a.zip"
+  X-Robots-Tag: noindex
+
+/source-assets-b.zip
+  Content-Type: application/zip
+  Content-Disposition: attachment; filename="zikpe-journal-source-assets-b.zip"
+  X-Robots-Tag: noindex
+
+/source-assets-c.zip
+  Content-Type: application/zip
+  Content-Disposition: attachment; filename="zikpe-journal-source-assets-c.zip"
   X-Robots-Tag: noindex

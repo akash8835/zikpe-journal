@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1" name="viewport"/><style>html, body { margin: 0; } html { background: transparent; } body {width:100%;}</style><style>/* zikpe/src/style.css */
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+body {
+  background: var(--ds-page);
+}
+.file-card:has(.magazine) {
+  max-width: 1280px !important;
+  padding: 0 !important;
+}
+.magazine {
+  color: var(--ds-ink);
+  font-family: "KMR Melange Grotesk", sans-serif;
+}
+.magazine * {
+  box-sizing: border-box;
+}
+.magazine a {
+  color: inherit;
+  text-decoration: none;
+}
+.magazine button,
+.magazine input {
+  font: inherit;
+}
+.magazine button {
+  cursor: pointer;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 40px;
+  border-bottom: 1px solid var(--ds-hairline);
+  gap: 28px;
+}
+.brand {
+  font-size: 31px;
+  font-weight: 700;
+  letter-spacing: -1.7px;
+  white-space: nowrap;
+}
+.brand span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3.4px;
+  margin-top: 4px;
+}
+.topbar nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  font-weight: 600;
+}
+.topbar > a:last-child {
+  font-size: 12px;
+  white-space: nowrap;
+}
+.masthead {
+  padding: 0 40px 44px;
+}
+.mast-label {
+  font-size: 11px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.mast-label span {
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ds-ink-2);
+}
+.hero {
+  display: grid;
+  grid-template-columns: 1.08fr 1fr;
+  background: #edf2fc;
+  min-height: 450px;
+}
+.heroimage {
+  position: relative;
+  min-height: 450px;
+}
+.heroimage img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+.photo-mark {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  font-size: 9px;
+  background: #fffdf6dd;
+  padding: 4px 7px;
+  color: #3a3430;
+}
+.herocopy {
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.eyebrow {
+  display: block;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.herocopy h1,
+.herocopy h2 {
+  font-size: 48px !important;
+  line-height: 1.08 !important;
+  letter-spacing: -1.8px !important;
+  margin: 18px 0 22px !important;
+  font-weight: 800 !important;
+}
+.herocopy p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+.herocopy header {
+  padding: 0 !important;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 12px 23px;
+  background: var(--ds-ink);
+  color: white !important;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+.hero-foot {
+  margin-top: 28px;
+  font-size: 10px;
+  color: var(--ds-ink-2);
+}
+.featured,
+.latest,
+.related {
+  padding: 28px 40px 54px;
+}
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 24px;
+  margin-bottom: 27px;
+}
+.section-title h2,
+.newsletter h2,
+.money-strip h2 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  margin: 8px 0;
+}
+.section-title a {
+  font-size: 12px;
+  border-bottom: 1px solid;
+  padding: 6px 0;
+  white-space: nowrap;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+}
+.story {
+  display: block;
+  min-width: 0;
+}
+.photo {
+  position: relative;
+  overflow: hidden;
+}
+.story img {
+  width: 100%;
+  height: 244px;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s;
+}
+.story:hover img {
+  transform: scale(1.035);
+}
+.story.large img {
+  height: 320px;
+}
+.story .eyebrow {
+  margin: 16px 0 7px;
+}
+.story .eyebrow span {
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--ds-ink-2);
+  margin-left: 4px;
+}
+.story h3 {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 11px;
+  letter-spacing: -.35px;
+}
+.story.large h3 {
+  font-size: 25px;
+}
+.story p {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--ds-ink-2);
+  margin: 0 0 12px;
+}
+.read {
+  font-size: 10px;
+  letter-spacing: .4px;
+  border-bottom: 1px solid var(--ds-hairline);
+  padding-bottom: 4px;
+}
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 38px;
+  padding-top: 30px;
+  border-top: 1px solid var(--ds-hairline);
+}
+.mini-grid > a {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+.mini-grid img {
+  width: 88px;
+  height: 104px;
+  object-fit: cover;
+}
+.mini-grid h3 {
+  font-size: 15px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.mini-grid .eyebrow {
+  font-size: 9px;
+}
+.latest {
+  background: #edf2fc;
+  padding-top: 43px;
+}
+.search {
+  display: block;
+  min-width: 210px;
+}
+.search span {
+  font-size: 10px;
+  display: block;
+  margin-bottom: 6px;
+}
+.search input {
+  background: white;
+  border: 1px solid var(--ds-hairline);
+  padding: 12px;
+  font-size: 12px;
+  width: 100%;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0;
+}
+.categories button,
+.pagination button,
+.empty button {
+  border: 1px solid var(--ds-hairline);
+  background: white;
+  min-height: 44px;
+  padding: 10px 14px;
+  font-size: 11px;
+  border-radius: 24px;
+  color: var(--ds-ink);
+}
+button.selected {
+  background: var(--ds-ink);
+  color: white;
+  border-color: var(--ds-ink);
+}
+.results {
+  font-size: 11px;
+  color: var(--ds-ink-2);
+  margin: 12px 0 26px;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 38px 22px;
+}
+.story-grid .story h3 {
+  font-size: 20px;
+}
+.story-grid .story img {
+  height: 255px;
+}
+.story-grid .eyebrow span {
+  display: none;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+.pagination button:disabled {
+  opacity: .4;
+  cursor: default;
+}
+.money-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 55px;
+  padding: 55px 70px;
+}
+.money-strip img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+.money-strip p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ds-ink-2);
+}
+.newsletter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 42px;
+  padding: 45px 40px;
+  background: #edf2fc;
+  align-items: center;
+}
+.newsletter h2 {
+  font-size: 32px;
+}
+.newsletter p {
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 14px 0;
+}
+.newsletter label {
+  font-size: 11px;
+  display: block;
+  margin-bottom: 9px;
+}
+.emailrow {
+  display: flex;
+  background: white;
+}
+.emailrow input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid var(--ds-hairline);
+  font-size: 12px;
+}
+.emailrow button {
+  white-space: nowrap;
+  background: var(--ds-ink);
+  color: white;
+  border: 0;
+  padding: 13px 19px;
+  font-size: 12px;
+}
+.newsletter .micro {
+  font-size: 10px;
+  min-height: 18px;
+  color: var(--ds-ink-2);
+}
+footer {
+  padding: 35px 40px 20px;
+}
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--ds-hairline);
+}
+.footer-main p {
+  font-size: 12px;
+  color: var(--ds-ink-2);
+  line-height: 1.7;
+}
+.footer-main > a {
+  font-size: 11px;
+}
+.article {
+  padding: 32px 40px;
+}
+.back {
+  font-size: 11px;
+  display: inline-block;
+  min-height: 44px;
+}
+.article-head {
+  max-width: 800px;
+  margin: 12px auto 30px;
+  text-align: center;
+}
+.article-head h1 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1.7px;
+  margin: 20px 0;
+}
+.lede {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ds-ink-2);
+}
+.byline {
+  font-size: 11px;
+  margin-top: 22px;
+}
+.byline span {
+  margin-left: 30px;
+  color: var(--ds-ink-2);
+}
+.article-photo {
+  margin: 0;
+}
+.article-photo img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  display: block;
+}
+.article-photo figcaption {
+  font-size: 10px;
+  color: var(--ds-ink-2);
+  line-height: 1.5;
+  padding: 10px 0;
+}
+.article-body {
+  max-width: 680px;
+  margin: 35px auto;
+}
+.article-body section {
+  margin-bottom: 29px;
+}
+.article-body h2 {
+  font-family:
+    Aime,
+    Georgia,
+    serif;
+  font-size: 28px;
+  letter-spacing: -.4px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 14px;
+}
+.article-body p {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--ds-ink-2);
+}
+.faq {
+  border-top: 1px solid var(--ds-hairline);
+  padding-top: 27px;
+}
+.faq details {
+  border-bottom: 1px solid var(--ds-hairline);
+  padding: 15px 0;
+}
+.faq summary {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  min-height: 35px;
+}
+.faq p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.article-cta {
+  padding: 30px;
+  background: #edf2fc;
+  margin: 30px 0;
+}
+.article-cta a {
+  font-size: 13px;
+  border-bottom: 1px solid;
+}
+.sources {
+  font-size: 11px;
+  line-height: 1.8;
+  color: var(--ds-ink-2);
+}
+.sources p {
+  font-size: 12px;
+}
+.sources summary {
+  cursor: pointer;
+  min-height: 44px;
+}
+.sources a {
+  text-decoration: underline;
+}
+.related {
+  background: #edf2fc;
+}
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+.empty {
+  text-align: center;
+  padding: 50px;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--ds-teal);
+  outline-offset: 4px;
+}
+@media (max-width: 900px) {
+  .topbar {
+    padding: 20px 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .topbar nav {
+    order: 3;
+    width: 100%;
+    gap: 22px;
+  }
+  .topbar nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .masthead {
+    padding: 0 24px 30px;
+  }
+  .hero {
+    min-height: 390px;
+  }
+  .heroimage {
+    min-height: 390px;
+  }
+  .herocopy {
+    padding: 30px;
+  }
+  .herocopy h1,
+  .herocopy h2 {
+    font-size: 40px !important;
+  }
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .featured,
+  .latest,
+  .related {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .mini-grid {
+    grid-template-columns: 1fr;
+  }
+  .mini-grid img {
+    width: 100px;
+    height: 90px;
+  }
+  .money-strip {
+    padding: 35px 24px;
+    gap: 25px;
+  }
+  .newsletter {
+    padding: 35px 24px;
+  }
+  .related-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .related-grid > .story:last-child {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .topbar {
+    padding: 18px 20px;
+  }
+  .brand {
+    font-size: 29px;
+  }
+  .topbar nav {
+    gap: 4px 21px;
+    font-size: 12px;
+  }
+  .topbar > a:last-child {
+    font-size: 11px;
+  }
+  .masthead {
+    padding: 0 20px 22px;
+  }
+  .mast-label {
+    padding: 16px 0;
+    font-size: 10px;
+  }
+  .mast-label span {
+    display: none;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .heroimage {
+    min-height: 275px;
+  }
+  .herocopy {
+    padding: 30px 25px;
+  }
+  .herocopy h1,
+  .herocopy h2 {
+    font-size: 38px !important;
+    letter-spacing: -1.5px !important;
+  }
+  .herocopy p {
+    font-size: 14px !important;
+  }
+  .hero-foot {
+    margin-top: 24px;
+  }
+  .featured,
+  .latest,
+  .related {
+    padding: 25px 20px 35px;
+  }
+  .section-title {
+    display: block;
+    margin-bottom: 22px;
+  }
+  .section-title h2 {
+    font-size: 31px;
+    margin-bottom: 15px;
+  }
+  .section-title > a {
+    display: inline-block;
+  }
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .story.large img {
+    height: 270px;
+  }
+  .story.large h3 {
+    font-size: 24px;
+  }
+  .mini-grid {
+    gap: 22px;
+    margin-top: 30px;
+    padding-top: 24px;
+  }
+  .mini-grid .eyebrow {
+    font-size: 9px;
+  }
+  .story-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 15px;
+  }
+  .story-grid .story img {
+    height: 185px;
+  }
+  .story-grid .story h3 {
+    font-size: 17px;
+  }
+  .story-grid .eyebrow {
+    font-size: 8px;
+    letter-spacing: .7px;
+  }
+  .story-grid .photo-mark {
+    display: none;
+  }
+  .search {
+    margin-top: 24px;
+  }
+  .categories {
+    gap: 7px;
+  }
+  .categories button {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+  .pagination {
+    gap: 7px;
+  }
+  .pagination button {
+    padding: 10px 12px;
+  }
+  .money-strip {
+    grid-template-columns: 1fr;
+    padding: 35px 20px;
+    gap: 25px;
+  }
+  .money-strip h2 {
+    font-size: 31px;
+  }
+  .money-strip img {
+    height: 290px;
+  }
+  .newsletter {
+    grid-template-columns: 1fr;
+    padding: 32px 20px;
+    gap: 22px;
+  }
+  .newsletter h2 {
+    font-size: 30px;
+  }
+  .emailrow button {
+    padding: 12px;
+  }
+  .footer-main {
+    display: block;
+  }
+  .footer-main p {
+    margin: 20px 0;
+  }
+  footer {
+    padding: 30px 20px 20px;
+  }
+  .article {
+    padding: 23px 20px;
+  }
+  .article-head {
+    margin-top: 12px;
+    text-align: left;
+  }
+  .article-head h1 {
+    font-size: 37px;
+    letter-spacing: -1.2px;
+  }
+  .lede {
+    font-size: 15px;
+  }
+  .article-photo img {
+    height: 270px;
+  }
+  .article-body {
+    margin-top: 25px;
+  }
+  .article-body h2 {
+    font-size: 27px;
+  }
+  .article-body p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .article-cta {
+    padding: 24px;
+  }
+  .related-grid {
+    gap: 16px;
+  }
+  .related-grid .story img {
+    height: 180px;
+  }
+  .related-grid .story h3 {
+    font-size: 18px;
+  }
+  .related-grid .photo-mark {
+    display: none;
+  }
+  .byline {
+    font-size: 10px;
+  }
+  .photo-mark {
+    font-size: 8px;
+  }
+}
+.collage {
+  position: relative;
+  padding: 55px 0 75px;
+  overflow: hidden;
+}
+.collage-photos {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+  transform: rotate(-2deg);
+  width: 115%;
+  margin-left: -7.5%;
+}
+.collage-photos img {
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+}
+.collage-caption {
+  position: absolute;
+  left: 39%;
+  right: 8%;
+  top: 39%;
+  background: white;
+  padding: 24px 28px;
+  box-shadow: 0 6px 25px #00000012;
+}
+.tags {
+  display: flex;
+  gap: 8px;
+}
+.tags span {
+  background: #edf2fc;
+  padding: 5px 10px;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+.collage-caption h2 {
+  font-size: 21px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 13px 0;
+}
+.collage-read {
+  font-size: 10px;
+}
+.collage-credit {
+  position: absolute;
+  bottom: 24px;
+  left: 40px;
+  font-size: 9px;
+  color: var(--ds-ink-2);
+}
+@media (max-width: 600px) {
+  .collage {
+    padding: 35px 0 80px;
+  }
+  .collage-photos {
+    gap: 12px;
+    width: 185%;
+    margin-left: -40%;
+  }
+  .collage-photos img {
+    height: 290px;
+  }
+  .collage-caption {
+    left: 15%;
+    right: 7%;
+    top: 40%;
+    padding: 17px;
+  }
+  .collage-caption h2 {
+    font-size: 18px;
+  }
+  .collage-credit {
+    left: 20px;
+    font-size: 8px;
+    bottom: 28px;
+  }
+}
+.category-page {
+  padding: 32px 40px 55px;
+}
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 26px;
+  margin-top: 35px;
+}
+@media (max-width: 600px) {
+  .category-page {
+    padding: 24px 20px 40px;
+  }
+  .category-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+.magazine {
+  color: #0d0d0d;
+  background: #fff;
+}
+.brand img {
+  width: 104px;
+  height: auto;
+  display: block;
+}
+.brand span {
+  color: #6633c9;
+  letter-spacing: 3.4px;
+}
+.hero,
+.newsletter,
+.related,
+.latest,
+.article-cta {
+  background: #f4effd;
+}
+.pill,
+.emailrow button {
+  background: #b2c532;
+  color: #0d0d0d !important;
+  font-weight: 600;
+}
+button.selected {
+  background: #6633c9;
+  border-color: #6633c9;
+  color: white;
+}
+.tags span {
+  background: #eee6fd;
+  color: #5424ab;
+}
+.topbar nav a:hover,
+.read,
+.section-title > a {
+  color: #6633c9;
+}
+.herocopy h1,
+.herocopy h2,
+.section-title h2,
+.newsletter h2,
+.money-strip h2,
+.article-head h1,
+.article-body h2,
+.category-page h1 {
+  font-family: "KMR Melange Grotesk", sans-serif !important;
+  letter-spacing: -1px;
+}
+.article-body h2 {
+  font-weight: 600;
+}
+.herocopy h1 {
+  font-weight: 600 !important;
+}
+.article-head h1 {
+  font-weight: 600;
+}
+.category-page h1 {
+  font-weight: 600 !important;
+}
+.newsletter h2,
+.section-title h2,
+.money-strip h2 {
+  font-weight: 600;
+}
+.brand {
+  letter-spacing: 0;
+}
+.topbar nav {
+  gap: 18px;
+}
+.newsletter .emailrow button:hover,
+.pill:hover {
+  background: #a0b426;
+}
+
+
+
+.magazine,
+.herocopy h1,
+.herocopy h2,
+.section-title h2,
+.newsletter h2,
+.money-strip h2,
+.article-head h1,
+.article-body h2,
+.category-page h1 {
+  font-family:
+    zikpe,
+    "KMR Melange Grotesk",
+    sans-serif !important;
+}
+
+html,body,#root{margin:0;min-height:100%}body{background:var(--ds-page)}.file-card:has(.magazine){max-width:1280px!important;padding:0!important}.magazine{color:var(--ds-ink);font-family:'KMR Melange Grotesk',sans-serif}.magazine *{box-sizing:border-box}.magazine a{color:inherit;text-decoration:none}.magazine button,.magazine input{font:inherit}.magazine button{cursor:pointer}.topbar{display:flex;align-items:center;justify-content:space-between;padding:24px 40px;border-bottom:1px solid var(--ds-hairline);gap:28px}.brand{font-size:31px;font-weight:700;letter-spacing:-1.7px;white-space:nowrap}.brand span{display:block;font-size:9px;letter-spacing:3.4px;margin-top:4px}.topbar nav{display:flex;gap:20px;flex-wrap:wrap;font-size:12px;font-weight:600}.topbar>a:last-child{font-size:12px;white-space:nowrap}.masthead{padding:0 40px 44px}.mast-label{font-size:11px;letter-spacing:1.8px;text-transform:uppercase;padding:20px 0;display:flex;justify-content:space-between}.mast-label span{font-size:11px;letter-spacing:0;text-transform:none;color:var(--ds-ink-2)}.hero{display:grid;grid-template-columns:1.08fr 1fr;background:#edf2fc;min-height:450px}.heroimage{position:relative;min-height:450px}.heroimage img{width:100%;height:100%;position:absolute;object-fit:cover}.photo-mark{position:absolute;bottom:12px;left:12px;font-size:9px;background:#fffdf6dd;padding:4px 7px;color:#3a3430}.herocopy{padding:44px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center}.eyebrow{display:block;letter-spacing:1.4px;text-transform:uppercase;font-size:10px;font-weight:600;line-height:1.8}.herocopy h1,.herocopy h2{font-size:48px!important;line-height:1.08!important;letter-spacing:-1.8px!important;margin:18px 0 22px!important;font-weight:800!important}.herocopy p{font-size:16px!important;line-height:1.7!important}.herocopy header{padding:0!important}.pill{display:inline-flex;align-items:center;min-height:46px;padding:12px 23px;background:var(--ds-ink);color:white!important;font-size:12px;font-weight:600;border-radius:30px;margin-top:20px}.hero-foot{margin-top:28px;font-size:10px;color:var(--ds-ink-2)}.featured,.latest,.related{padding:28px 40px 54px}.section-title{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:27px}.section-title h2,.newsletter h2,.money-strip h2{font-family:Aime,Georgia,serif;font-size:36px;font-weight:800;letter-spacing:-1px;line-height:1.15;margin:8px 0}.section-title a{font-size:12px;border-bottom:1px solid;padding:6px 0;white-space:nowrap}.featured-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.story{display:block;min-width:0}.photo{position:relative;overflow:hidden}.story img{width:100%;height:244px;object-fit:cover;display:block;transition:transform .4s}.story:hover img{transform:scale(1.035)}.story.large img{height:320px}.story .eyebrow{margin:16px 0 7px}.story .eyebrow span{letter-spacing:0;text-transform:none;font-weight:400;color:var(--ds-ink-2);margin-left:4px}.story h3{font-size:21px;font-weight:600;line-height:1.25;margin:0 0 11px;letter-spacing:-.35px}.story.large h3{font-size:25px}.story p{font-size:13px;line-height:1.65;color:var(--ds-ink-2);margin:0 0 12px}.read{font-size:10px;letter-spacing:.4px;border-bottom:1px solid var(--ds-hairline);padding-bottom:4px}.mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:38px;padding-top:30px;border-top:1px solid var(--ds-hairline)}.mini-grid>a{display:flex;gap:14px;align-items:center}.mini-grid img{width:88px;height:104px;object-fit:cover}.mini-grid h3{font-size:15px;line-height:1.4;font-weight:600;margin:5px 0}.mini-grid .eyebrow{font-size:9px}.latest{background:#edf2fc;padding-top:43px}.search{display:block;min-width:210px}.search span{font-size:10px;display:block;margin-bottom:6px}.search input{background:white;border:1px solid var(--ds-hairline);padding:12px;font-size:12px;width:100%}.categories{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.categories button,.pagination button,.empty button{border:1px solid var(--ds-hairline);background:white;min-height:44px;padding:10px 14px;font-size:11px;border-radius:24px;color:var(--ds-ink)}button.selected{background:var(--ds-ink);color:white;border-color:var(--ds-ink)}.results{font-size:11px;color:var(--ds-ink-2);margin:12px 0 26px}.story-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:38px 22px}.story-grid .story h3{font-size:20px}.story-grid .story img{height:255px}.story-grid .eyebrow span{display:none}.pagination{display:flex;justify-content:center;gap:10px;margin-top:40px}.pagination button:disabled{opacity:.4;cursor:default}.money-strip{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:55px;padding:55px 70px}.money-strip img{width:100%;height:320px;object-fit:cover}.money-strip p{font-size:14px;line-height:1.7;color:var(--ds-ink-2)}.newsletter{display:grid;grid-template-columns:1fr 1fr;gap:42px;padding:45px 40px;background:#edf2fc;align-items:center}.newsletter h2{font-size:32px}.newsletter p{font-size:13px;line-height:1.6;margin:14px 0}.newsletter label{font-size:11px;display:block;margin-bottom:9px}.emailrow{display:flex;background:white}.emailrow input{width:100%;min-width:0;padding:15px;border:1px solid var(--ds-hairline);font-size:12px}.emailrow button{white-space:nowrap;background:var(--ds-ink);color:white;border:0;padding:13px 19px;font-size:12px}.newsletter .micro{font-size:10px;min-height:18px;color:var(--ds-ink-2)}footer{padding:35px 40px 20px}.footer-main{display:flex;justify-content:space-between;align-items:center;gap:30px;padding-bottom:25px;border-bottom:1px solid var(--ds-hairline)}.footer-main p{font-size:12px;color:var(--ds-ink-2);line-height:1.7}.footer-main>a{font-size:11px}.article{padding:32px 40px}.back{font-size:11px;display:inline-block;min-height:44px}.article-head{max-width:800px;margin:12px auto 30px;text-align:center}.article-head h1{font-family:Aime,Georgia,serif;font-size:48px;font-weight:800;line-height:1.08;letter-spacing:-1.7px;margin:20px 0}.lede{font-size:17px;line-height:1.65;color:var(--ds-ink-2)}.byline{font-size:11px;margin-top:22px}.byline span{margin-left:30px;color:var(--ds-ink-2)}.article-photo{margin:0}.article-photo img{width:100%;height:440px;object-fit:cover;display:block}.article-photo figcaption{font-size:10px;color:var(--ds-ink-2);line-height:1.5;padding:10px 0}.article-body{max-width:680px;margin:35px auto}.article-body section{margin-bottom:29px}.article-body h2{font-family:Aime,Georgia,serif;font-size:28px;letter-spacing:-.4px;font-weight:400;line-height:1.25;margin:0 0 14px}.article-body p{font-size:15px;line-height:1.85;color:var(--ds-ink-2)}.faq{border-top:1px solid var(--ds-hairline);padding-top:27px}.faq details{border-bottom:1px solid var(--ds-hairline);padding:15px 0}.faq summary{font-size:14px;font-weight:600;cursor:pointer;min-height:35px}.faq p{font-size:14px;margin:5px 0}.article-cta{padding:30px;background:#edf2fc;margin:30px 0}.article-cta a{font-size:13px;border-bottom:1px solid}.sources{font-size:11px;line-height:1.8;color:var(--ds-ink-2)}.sources p{font-size:12px}.sources summary{cursor:pointer;min-height:44px}.sources a{text-decoration:underline}.related{background:#edf2fc}.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px}.empty{text-align:center;padding:50px}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--ds-teal);outline-offset:4px}
+@media(max-width:900px){.topbar{padding:20px 24px;gap:20px;flex-wrap:wrap}.topbar nav{order:3;width:100%;gap:22px}.topbar nav a{min-height:44px;display:flex;align-items:center}.masthead{padding:0 24px 30px}.hero{min-height:390px}.heroimage{min-height:390px}.herocopy{padding:30px}.herocopy h1,.herocopy h2{font-size:40px!important}.story-grid{grid-template-columns:repeat(2,1fr)}.featured,.latest,.related{padding-left:24px;padding-right:24px}.mini-grid{grid-template-columns:1fr}.mini-grid img{width:100px;height:90px}.money-strip{padding:35px 24px;gap:25px}.newsletter{padding:35px 24px}.related-grid{grid-template-columns:repeat(2,1fr)}.related-grid>.story:last-child{display:none}}
+@media(max-width:600px){.topbar{padding:18px 20px}.brand{font-size:29px}.topbar nav{gap:4px 21px;font-size:12px}.topbar>a:last-child{font-size:11px}.masthead{padding:0 20px 22px}.mast-label{padding:16px 0;font-size:10px}.mast-label span{display:none}.hero{grid-template-columns:1fr}.heroimage{min-height:275px}.herocopy{padding:30px 25px}.herocopy h1,.herocopy h2{font-size:38px!important;letter-spacing:-1.5px!important}.herocopy p{font-size:14px!important}.hero-foot{margin-top:24px}.featured,.latest,.related{padding:25px 20px 35px}.section-title{display:block;margin-bottom:22px}.section-title h2{font-size:31px;margin-bottom:15px}.section-title>a{display:inline-block}.featured-grid{grid-template-columns:1fr;gap:30px}.story.large img{height:270px}.story.large h3{font-size:24px}.mini-grid{gap:22px;margin-top:30px;padding-top:24px}.mini-grid .eyebrow{font-size:9px}.story-grid{grid-template-columns:1fr 1fr;gap:28px 15px}.story-grid .story img{height:185px}.story-grid .story h3{font-size:17px}.story-grid .eyebrow{font-size:8px;letter-spacing:.7px}.story-grid .photo-mark{display:none}.search{margin-top:24px}.categories{gap:7px}.categories button{padding:9px 12px;font-size:10px}.pagination{gap:7px}.pagination button{padding:10px 12px}.money-strip{grid-template-columns:1fr;padding:35px 20px;gap:25px}.money-strip h2{font-size:31px}.money-strip img{height:290px}.newsletter{grid-template-columns:1fr;padding:32px 20px;gap:22px}.newsletter h2{font-size:30px}.emailrow button{padding:12px}.footer-main{display:block}.footer-main p{margin:20px 0}footer{padding:30px 20px 20px}.article{padding:23px 20px}.article-head{margin-top:12px;text-align:left}.article-head h1{font-size:37px;letter-spacing:-1.2px}.lede{font-size:15px}.article-photo img{height:270px}.article-body{margin-top:25px}.article-body h2{font-size:27px}.article-body p{font-size:14px;line-height:1.85}.article-cta{padding:24px}.related-grid{gap:16px}.related-grid .story img{height:180px}.related-grid .story h3{font-size:18px}.related-grid .photo-mark{display:none}.byline{font-size:10px}.photo-mark{font-size:8px}}
+.collage{position:relative;padding:55px 0 75px;overflow:hidden}.collage-photos{display:grid;grid-template-columns:repeat(5,1fr);gap:22px;transform:rotate(-2deg);width:115%;margin-left:-7.5%}.collage-photos img{width:100%;height:370px;object-fit:cover}.collage-caption{position:absolute;left:39%;right:8%;top:39%;background:white;padding:24px 28px;box-shadow:0 6px 25px #00000012}.tags{display:flex;gap:8px}.tags span{background:#edf2fc;padding:5px 10px;font-size:9px;letter-spacing:1.2px;font-weight:600}.collage-caption h2{font-size:21px;line-height:1.4;font-weight:600;margin:13px 0}.collage-read{font-size:10px}.collage-credit{position:absolute;bottom:24px;left:40px;font-size:9px;color:var(--ds-ink-2)}@media(max-width:600px){.collage{padding:35px 0 80px}.collage-photos{gap:12px;width:185%;margin-left:-40%}.collage-photos img{height:290px}.collage-caption{left:15%;right:7%;top:40%;padding:17px}.collage-caption h2{font-size:18px}.collage-credit{left:20px;font-size:8px;bottom:28px}}
+.category-page{padding:32px 40px 55px}.category-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 26px;margin-top:35px}@media(max-width:600px){.category-page{padding:24px 20px 40px}.category-grid{grid-template-columns:1fr;gap:32px}}
+/* ZikPe brand skin, inspected on its public homepage. */
+.magazine{color:#0d0d0d;background:#fff}.brand img{width:104px;height:auto;display:block}.brand span{color:#6633c9;letter-spacing:3.4px}.hero,.newsletter,.related,.latest,.article-cta{background:#f4effd}.pill,.emailrow button{background:#b2c532;color:#0d0d0d!important;font-weight:600}button.selected{background:#6633c9;border-color:#6633c9;color:white}.tags span{background:#eee6fd;color:#5424ab}.topbar nav a:hover,.read,.section-title>a{color:#6633c9}.herocopy h1,.herocopy h2,.section-title h2,.newsletter h2,.money-strip h2,.article-head h1,.article-body h2,.category-page h1{font-family:'KMR Melange Grotesk',sans-serif!important;letter-spacing:-1px}.article-body h2{font-weight:600}.herocopy h1{font-weight:600!important}.article-head h1{font-weight:600}.category-page h1{font-weight:600!important}.newsletter h2,.section-title h2,.money-strip h2{font-weight:600}.brand{letter-spacing:0}.topbar nav{gap:18px}.newsletter .emailrow button:hover,.pill:hover{background:#a0b426}
+
+
+.magazine,.herocopy h1,.herocopy h2,.section-title h2,.newsletter h2,.money-strip h2,.article-head h1,.article-body h2,.category-page h1{font-family:zikpe,Arial,sans-serif!important}
+</style><style>:root{--ds-page:#fff;--ds-ink:#131313;--ds-ink-2:#555;--ds-hairline:#e8e8e8;--ds-accent:#6633c9}.file-card{margin:auto;max-width:1280px}.file-header h1{font-size:40px;line-height:1.1;margin:20px 0}.file-header p{line-height:1.6}.file-closing{padding:25px 40px;font-size:12px;color:#555}body{width:100%!important}</style><style>.herocopy .file-header{padding:0}.herocopy h1{font-size:44px;line-height:1.07;margin:20px 0 40px}.herocopy p{font-size:16px;line-height:1.6}.category-page h1{font-size:36px}.file-closing{border-top:1px solid #eee}.file-closing p{margin:0}@media(max-width:640px){.herocopy h1{font-size:38px}.file-closing{padding:25px 20px}}</style><link href="../../zikpe-theme.css" rel="stylesheet"/><title>Delhi wellness-retreat stays: how to choose a calm reset | ZikPe Journal</title><meta content="Looking for rest in or near Delhi? A short guide to checking programmes, qualifications, setting and terms before you book a wellness stay." name="description"/><meta content="index, follow, max-image-preview:large" name="robots"/><link href="index.html" rel="canonical"/><meta content="Delhi wellness-retreat stays: how to choose a calm reset | ZikPe Journal" property="og:title"/><meta content="Looking for rest in or near Delhi? A short guide to checking programmes, qualifications, setting and terms before you book a wellness stay." property="og:description"/><meta content="article" property="og:type"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/stories/delhi-wellness-retreat-stays-how-to-choose-a-calm-reset/" property="og:url"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/assets/delhi-wellness-retreat-stays-how-to-choose-a-calm-reset-original.webp" property="og:image"/><meta content="ZikPe Journal" property="og:site_name"/><meta content="en_IN" property="og:locale"/><meta content="summary_large_image" name="twitter:card"/><meta content="Delhi wellness-retreat stays: how to choose a calm reset | ZikPe Journal" name="twitter:title"/><meta content="Looking for rest in or near Delhi? A short guide to checking programmes, qualifications, setting and terms before you book a wellness stay." name="twitter:description"/><meta content="https://zikpe-journal.ashwatthama710.workers.dev/assets/delhi-wellness-retreat-stays-how-to-choose-a-calm-reset-original.webp" name="twitter:image"/><script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Delhi wellness-retreat stays: how to choose a calm reset", "description": "Looking for rest in or near Delhi? A short guide to checking programmes, qualifications, setting and terms before you book a wellness stay.", "image": ["https://zikpe-journal.ashwatthama710.workers.dev/assets/delhi-wellness-retreat-stays-how-to-choose-a-calm-reset-original.webp"], "inLanguage": "en", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://zikpe-journal.ashwatthama710.workers.dev/stories/delhi-wellness-retreat-stays-how-to-choose-a-calm-reset/"}, "author": {"@type": "Organization", "name": "ZikPe editorial"}, "publisher": {"@type": "Organization", "name": "ZikPe Journal", "logo": {"@type": "ImageObject", "url": "https://zikpe-journal.ashwatthama710.workers.dev/assets/666854f1bf42a8c3.png"}}, "articleSection": "Stay"}</script></head><body><main class="file-card" data-width="fluid"><div class="magazine"><header class="topbar"><a aria-label="ZikPe journal home" class="brand" href="https://zikpe-journal.ashwatthama710.workers.dev/"><img alt="ZikPe" decoding="async" src="../../assets/666854f1bf42a8c3.png"/><span>JOURNAL</span></a><nav aria-label="Main navigation"><a href="https://zikpe-journal.ashwatthama710.workers.dev/">Home</a><a href="https://zikpe-journal.ashwatthama710.workers.dev/category/eat">Eat</a><a href="https://zikpe-journal.ashwatthama710.workers.dev/category/see">See</a><a href="https://zikpe-journal.ashwatthama710.workers.dev/category/stay">Stay</a><a href="https://zikpe-journal.ashwatthama710.workers.dev/category/shop">Shop</a><a href="https://zikpe-journal.ashwatthama710.workers.dev/category/guides">Guides</a><a href="https://zikpe-journal.ashwatthama710.workers.dev/category/upi">UPI for Tourists</a><a href="https://zikpe-journal.ashwatthama710.workers.dev/category/culture">Culture</a></nav><a class="file-link" href="https://zikpe.com" rel="noopener noreferrer" target="_blank">Discover ZikPe ↗</a></header><article class="article"><a class="back" href="https://zikpe-journal.ashwatthama710.workers.dev/">← Back to the journal</a><header class="article-head"><span class="eyebrow">Stay</span><h1>Delhi wellness-retreat stays: how to choose a calm reset</h1><p class="lede">Looking for rest in or near Delhi? A short guide to checking programmes, qualifications, setting and terms before you book a wellness stay.</p><div class="byline">ZikPe editorial <span>3 min read</span></div></header><figure class="article-photo"><img alt="Conceptual editorial illustration for Delhi wellness-retreat stays: how to choose a calm reset" decoding="async" src="../../assets/delhi-wellness-retreat-stays-how-to-choose-a-calm-reset-original.webp"/></figure><div class="article-body"><section><h2>What you want from a stay</h2><p>Wellness stays range from a quiet room with yoga to structured programmes with treatments, meals and talks. Before you search, decide what you want: rest, movement, a digital break or help with a particular goal.</p><p>Clarity at the start makes it easier to compare.</p></section><section><h2>Location and setting</h2><p>Delhi is busy and noisy. Some retreats sit in the city, others in nearby countryside, a few hours away. Think about travel time, noise and air quality, and whether you want to be close to the city or away from it.</p><p>Check the location on a map and ask about the route.</p></section><section><h2>Look at the programme</h2><p>Ask for a daily schedule, the types of activities and how much is optional. Find out how many people join, whether groups are small and whether you can adjust the intensity.</p><p>A flexible programme suits first-timers.</p></section><section><h2>Check who leads it</h2><p>Ask about the teachers and practitioners, their training and experience. For medical or therapeutic treatments, ask who is qualified and how the stay handles health conditions.</p><p>If you have a health condition, speak to your doctor before you book.</p></section><section><h2>Food and rest</h2><p>Ask about the meals, whether they suit your diet and what is included. Check the rooms, bedding and quiet hours. A good retreat protects your sleep.</p><p>Ask what to bring and what is provided.</p></section><section><h2>Read terms and costs</h2><p>Ask for a clear price list, what is included and what is extra. Check deposit, cancellation and refund terms in writing. Be careful with offers that need immediate payment.</p><p>If a place cannot answer plainly, look elsewhere.</p></section><section><h2>Read recent reviews</h2><p>Look at recent, detailed reviews from several sources. Notice patterns on cleanliness, safety, staff and whether the experience matched the description.</p><p>One bad review is a note. Many on the same issue is a signal.</p></section><section><h2>Safety and comfort</h2><p>Ask about emergency procedures, nearby medical care and how staff handle problems. Solo travellers should check how guests are looked after at night.</p><p>Share your plans with someone you trust.</p></section><section><h2>A smaller option</h2><p>If a full retreat is too much, consider a hotel with a quiet spa or a day programme. Even a morning of yoga and a slow lunch can help.</p><p>The best reset is one you will actually enjoy.</p></section><section><h2>A sample day</h2><p>A typical day may begin with a gentle morning practice, followed by breakfast, a quiet period, a workshop or treatment, lunch and a rest. Evenings are often calm, with early dinners and lights out. Ask for the real schedule before you book.</p><p>If the days look packed, ask how much is optional.</p></section><section><h2>Before you arrive</h2><p>Bring comfortable clothes, a refillable bottle, any medicines you take and a notebook. Tell the staff about injuries, allergies and health conditions in advance. Switch off notifications for the stay.</p><p>Arriving rested makes the first day easier.</p></section><section><h2>Afterwards</h2><p>Give yourself a day to settle back in. Keep a few habits you enjoyed, such as a morning stretch or a quiet walk. Do not expect the stay to fix everything. A small change, kept up, often works better.</p><p>Write down what helped, while it is fresh.</p></section><section><h2>A ZikPe note</h2><p>Along the way, ZikPe is the answer for easy payments at the cafes and shops you pass. Keep a card for the stay itself and a few small notes for small things.</p></section><div class="article-cta"><span class="eyebrow">Ready for the journey?</span><h2>Your next India story, with ZikPe.</h2><p>For foreigners, NRIs and Indians, the journey continues with ZikPe. For everyday merchant payments while you explore India, ZikPe offers eligible users a visitor wallet with card top-ups and UPI QR payments. Check your eligibility, supported funding cards, fees, payment limits and refund terms in the current app before adding money.</p><a class="file-link" href="https://zikpe.com" rel="noopener noreferrer" target="_blank">Explore the ZikPe app ↗</a></div></div></article><section class="related"><div class="section-title"><h2>Keep exploring</h2><a href="https://zikpe-journal.ashwatthama710.workers.dev/">All stories ↗</a></div><div class="related-grid"><a class="story" href="https://zikpe-journal.ashwatthama710.workers.dev/stories/meghalaya-stays-how-to-choose-in-shillong-cherrapunji-and-the-villages/"><div class="photo"><img alt="Conceptual editorial illustration for Meghalaya stays: how to choose in Shillong, Cherrapunji and the villages" decoding="async" loading="lazy" src="../../assets/meghalaya-stays-how-to-choose-in-shillong-cherrapunji-and-the-villages-original.webp"/></div><div class="eyebrow">Stay <span>• 4 min read</span></div><h3>Meghalaya stays: how to choose in Shillong, Cherrapunji and the villages</h3><p>Meghalaya offers hotels, homestays and village stays. Here is how to think about location, season, access and what to check before you book.</p><span class="read">Read story ↗</span></a><a class="story" href="https://zikpe-journal.ashwatthama710.workers.dev/stories/delhi-luxury-stays-imperial-leela-or-oberoi-room-and-location/"><div class="photo"><img alt="Conceptual editorial illustration for Delhi luxury stays: a Janpath base, a palace setting or a room with a view" decoding="async" loading="lazy" src="../../assets/delhi-luxury-stays-imperial-leela-or-oberoi-room-and-location-original.webp"/></div><div class="eyebrow">Stay <span>• 4 min read</span></div><h3>Delhi luxury stays: a Janpath base, a palace setting or a room with a view</h3><p>The Imperial, The Leela Palace and The Oberoi offer different starting points. Compare the actual room and daily route before the grand entrance.</p><span class="read">Read story ↗</span></a></div></section><section class="newsletter"><div><span class="eyebrow">The ZikPe newsletter</span><h2>Get new travel stories in your inbox.</h2><p>Travel ideas. Thoughtful guides. Fewer payment surprises.</p></div><form><label for="email">Email address</label><div class="emailrow"><input id="email" placeholder="you@example.com" required="" type="email"/><button type="button">Subscribe ↗</button></div><p class="micro" role="status">Newsletter design preview. Signup is not connected.</p></form></section><footer><div class="footer-main"><div class="brand"><img alt="ZikPe" decoding="async" src="../../assets/666854f1bf42a8c3.png"/><span>JOURNAL</span></div><p>Travel India. Take your time.<br/>Stories for the places, people and payments along the way.</p><a href="https://zikpe-journal.ashwatthama710.workers.dev/">Back to the journal ↑</a></div><footer class="file-closing">ZikPe Journal. No booking or payments happen on this site. Made in India with <span class="heart">♥</span></footer></footer></div></main><script src="../../site.js"></script></body></html>
