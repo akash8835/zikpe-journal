@@ -23,5 +23,5 @@
     "newsletter preview with explicit disconnected status",
     "source downloads"
   ],
-  "product_exceptions": "Amazon exact flow, Abu Dhabi airport promotion/counter and unspecified limits stay paused/unverified"
+  "product_exceptions": "Amazon support confirmed by user; exact UI not tested. Abu Dhabi excluded by user. Unspecified limits stay paused/unverified."
 }

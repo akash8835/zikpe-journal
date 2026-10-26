@@ -1,5 +1,5 @@
 {
-  "scope": "359 original reference posts; subject consolidation into285 original Journal stories. Subject representation does not claim exact list/property parity. Product exceptions stay paused.",
+  "scope": "359 original reference posts; subject consolidation into285 original Journal stories. Subject representation does not claim exact list/property parity. Abu Dhabi subject excluded by user; Amazon support confirmed, exact screens not tested; unspecified limits remain unverified and paused.",
   "records": [
     {
       "source_index": 0,
@@ -6921,7 +6921,7 @@
       "original_triage": "partial or generalized",
       "original_triage_note": "Generic online-order guidance, not a verified Amazon/ZikPe walkthrough. Must not transplant Mony compatibility.",
       "reviewed_at": "2026-10-26T19:58:00+05:30",
-      "assessment": "PAUSED PRODUCT EXCEPTION: exact Amazon checkout workflow or Abu Dhabi promotion/counter has not been verified. General payment guide is not coverage of the exact claim.",
+      "assessment": "Amazon payment support directly confirmed by Akash on26October20:02IST; support copy and wallet crosslink added. Exact checkout screens not tested or invented.",
       "journal_subject_headings": [
         "What can be tricky",
         "Train and bus bookings",
@@ -7268,7 +7268,7 @@
       "original_triage": "partial or generalized",
       "original_triage_note": "Generic Indian-airport payment advice is not source Abu Dhabi airport activation/promotion. Needs a truthful ZikPe-specific adaptation, not Mony event claims.",
       "reviewed_at": "2026-10-26T19:58:00+05:30",
-      "assessment": "PAUSED PRODUCT EXCEPTION: exact Amazon checkout workflow or Abu Dhabi promotion/counter has not been verified. General payment guide is not coverage of the exact claim.",
+      "assessment": "EXCLUDED BY USER26October20:03IST: Abu Dhabi airport/counter/promotion subject omitted from this outcome. Existing general Indian-airport guide preserved.",
       "journal_subject_headings": [
         "Land with a plan",
         "Currency exchange and ATMs",
