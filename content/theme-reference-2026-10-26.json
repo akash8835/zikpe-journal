@@ -1,0 +1,27 @@
+{
+  "reference": "https://zikpe.com/",
+  "checked_at": "2026-10-26T19:59:00+05:30",
+  "scope": "Journal-only adaptation, not production zikpe.com changes",
+  "visual_system": {
+    "ground": "#fbfaff",
+    "panel": "#f3f2f7",
+    "text": "#121212",
+    "primary": "#6a35ff",
+    "deep_panel": "#20104d",
+    "font": "official local zikpe font family",
+    "buttons": "12px radius, purple fill with white label",
+    "headings": "regular-weight dark display with restrained purple emphasis",
+    "layout": "rounded modules, arched lead-art frame, responsive reading columns"
+  },
+  "preserved": [
+    "285 story URLs and original artwork",
+    "category browsing",
+    "search",
+    "filters",
+    "pagination",
+    "existing hover and interactive effects",
+    "newsletter preview with explicit disconnected status",
+    "source downloads"
+  ],
+  "product_exceptions": "Amazon exact flow, Abu Dhabi airport promotion/counter and unspecified limits stay paused/unverified"
+}
