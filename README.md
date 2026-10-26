@@ -1,13 +1,13 @@
 # ZikPe Journal
 
-Original India travel, food, culture and practical guides for ZikPe. This repository contains the current complete site (snapshot October 14, 2026): 278 published stories, original image assets, category pages, fonts, SEO files and Cloudflare Workers configuration.
+Original India travel, food, culture and practical guides for ZikPe. This repository contains the current complete site (snapshot October 26, 2026): 285 published stories, original image assets, category pages, fonts, SEO files and Cloudflare Workers configuration.
 
 Live journal: https://zikpe-journal.ashwatthama710.workers.dev/
 
 ## Project layout
 
 - `public/`: deployable static site, including all article pages and original illustrations.
-- `public/stories/`: published stories plus retained noindex preview and legacy routes. The total route count is higher than the 160 listed stories.
+- `public/stories/`: published stories plus retained noindex preview and legacy routes. The total route count is higher than the 285 listed stories.
 - `public/assets/`: full-quality original artwork and site assets, unpacked as ordinary files.
 - `public/category/`: category listing pages.
 - `public/source*.zip`: the downloadable source packages (site code in `source.zip`, image assets split across `source-assets-a/b/c.zip`). Regenerated from this snapshot; the actual source is also unpacked in this repository.

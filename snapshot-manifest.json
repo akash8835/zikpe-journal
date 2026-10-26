@@ -1,0 +1,22 @@
+{
+  "snapshot": "2026-10-26",
+  "published_stories": 285,
+  "archives": {
+    "source-assets-b.zip": {
+      "bytes": 23743283,
+      "sha256": "b6edfb49a08e36fc3b6190c3170bfd23bb3f10198b4c573081ef381977594282"
+    },
+    "source.zip": {
+      "bytes": 3445977,
+      "sha256": "5279ab455e63996a288c30b02c7bd4f5849484ec270d7a1247162e751bc9cbc1"
+    },
+    "source-assets-c.zip": {
+      "bytes": 23704882,
+      "sha256": "69461283ffbbbebd3c2f70bffbd24b421a454d388d346cbd4e72be51bf796bc0"
+    },
+    "source-assets-a.zip": {
+      "bytes": 23737169,
+      "sha256": "fc8a4370d66f8b1ebcc8307da7b013e7436caadb8c56eca4a5a3202d40cda4f5"
+    }
+  }
+}
