@@ -3,20 +3,20 @@
   "published_stories": 285,
   "archives": {
     "source-assets-b.zip": {
-      "bytes": 23743283,
-      "sha256": "b6edfb49a08e36fc3b6190c3170bfd23bb3f10198b4c573081ef381977594282"
+      "bytes": 25349064,
+      "sha256": "d0a0c485978d313b7e140f343370b97c2eb433146b69373ae7293a34239facaf"
     },
     "source.zip": {
-      "bytes": 3446583,
-      "sha256": "06824291d691ba8ff70e49f42e13e14e618cdff8a020da7d0c0e173e925002f8"
+      "bytes": 3454996,
+      "sha256": "86496d097538677fbe5d4ec9e638bc549baca3f0535fe372f3ebd4a8bbe5b3ec"
     },
     "source-assets-c.zip": {
-      "bytes": 23704882,
-      "sha256": "69461283ffbbbebd3c2f70bffbd24b421a454d388d346cbd4e72be51bf796bc0"
+      "bytes": 25356377,
+      "sha256": "426da2be25649e904729f0a8a56ae91f07f93b54173b9660e7a66ad3270de1b6"
     },
     "source-assets-a.zip": {
-      "bytes": 23737169,
-      "sha256": "fc8a4370d66f8b1ebcc8307da7b013e7436caadb8c56eca4a5a3202d40cda4f5"
+      "bytes": 25318319,
+      "sha256": "ad58cc54c620284ad6c903229d400a586a19040ca866d7c0a54b3642a79e51d2"
     }
   }
 }
