@@ -7,9 +7,10 @@ Live journal: https://zikpe-journal.ashwatthama710.workers.dev/
 ## Project layout
 
 - `public/`: deployable static site, including all article pages and original illustrations.
-- `public/stories/`: published stories plus retained noindex preview and legacy routes. The total route count is higher than the 285 listed stories.
+- `public/blogs/<category>/<article-slug>/`: the 285 published stories, grouped by category folder (food-drink, destinations, stay, shopping, guides, travel-money, culture, upi-for-visitors). `public/blogs/<category>/` are the category listing pages.
+- `public/stories/`: retained noindex preview and legacy routes only.
+- `public/_redirects`: 301 redirects from the old `/stories/<slug>/` and `/category/<name>/` URLs to the new `/blogs/...` URLs.
 - `public/assets/`: full-quality original artwork and site assets, unpacked as ordinary files.
-- `public/category/`: category listing pages.
 - `public/source*.zip`: the downloadable source packages (site code in `source.zip`, image assets split across `source-assets-a/b/c.zip`). Regenerated from this snapshot; the actual source is also unpacked in this repository.
 - `wrangler.jsonc`: Cloudflare Workers static-assets deployment configuration.
 
