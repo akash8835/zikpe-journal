@@ -11,7 +11,7 @@
     "font": "official local zikpe font family",
     "buttons": "12px radius, purple fill with white label",
     "headings": "regular-weight dark display with restrained purple emphasis",
-    "layout": "rounded modules, arched lead-art frame, responsive reading columns"
+    "layout": "Same-site structure: wide72px desktop header, mobile navigation chips, central arched hero, split corner heading, floating white action card, rounded modules and dark multi-column footer. Journal-specific story cards/search/category navigation preserved."
   },
   "preserved": [
     "285 story URLs and original artwork",
