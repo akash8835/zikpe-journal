@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zikpe-journal.ashwatthama710.workers.dev/sitemap.xml
+Sitemap: https://zikpe.com/blogs/sitemap.xml
