@@ -16,6 +16,12 @@ Live journal: https://zikpe-journal.ashwatthama710.workers.dev/
 
 There is no separate server script in this version: Cloudflare Workers serves the static site through the configured assets directory.
 
+## Paths and hosting (read before integrating)
+
+- Journal pages live under `/blogs/` (home `/blogs/`, categories `/blogs/<category>/`, stories `/blogs/<category>/<slug>/`). `public/index.html` is a copy of `public/blogs/index.html` kept so the workers.dev preview root still works.
+- Shared files are referenced from the SITE ROOT: `/assets/`, `/fonts/`, `/site.js`, `/home.js`, `/zikpe-theme.css`, `/blog-polish.css`. Serve `public/` so those are available at the root of the host, or rewrite the prefix in all HTML (for example `/assets/` to `/blogs/assets/` and move the folders under `public/blogs/`). Final hosting under zikpe.com has not been verified.
+- Canonical, og:url, structured-data page URLs, sitemap.xml and robots.txt already use `https://zikpe.com/blogs/...`. `og:image`, `twitter:image` and structured-data image URLs still point at the workers.dev host and need repointing once assets are hosted on the final domain. `robots.txt` lists `https://zikpe.com/blogs/sitemap.xml`; confirm that path.
+
 ## Run locally
 
 Requires Node.js and npm.
